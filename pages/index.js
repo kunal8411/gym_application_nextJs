@@ -6,7 +6,7 @@ import Hero from "../components/heroSection/hero"
 export default function Home() {
   return (
     <div className={styles.container}>
-      Hello
+      {/* Hello */}
       <Hero/>
       {/* <Head>
         <title>Create Next App</title>
