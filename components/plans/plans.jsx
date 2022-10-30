@@ -4,9 +4,14 @@ import {plansData} from "../../data/plansData"
 function Plans() {
   return (
     <div className={classes.plans_container}>
-      <div className={classes.program_header} style={{ gap: "2rem" }}>
+      {/* <div  style={{ gap: "2rem" }}>
         <span className="stroke-text">READY TO START</span>
         <span> YOUR JOURNEY </span>
+        <span className="stroke-text">WITH US</span>
+      </div> */}
+      <div className={classes.plans_header} >
+        <span className="stroke-text">READY TO START</span>
+        <span>YOUR JOURNEY</span>
         <span className="stroke-text">WITH US</span>
       </div>
       {/* plans card */}
