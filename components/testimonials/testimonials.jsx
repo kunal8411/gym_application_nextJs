@@ -4,7 +4,7 @@ import { testimonialsData } from "../../data/testimonialsData";
 function Testimonials() {
   const [selected, setSelected] = useState(0);
   const testimonialsLength = testimonialsData.length;
-  console.log("testimonialsDatatestimonialsData", testimonialsData[selected]);
+  console.log("testimonialsDatatestimonialsDatsdfasadsa", testimonialsData[selected]);
   return (
     <div className={classes.testimonials}>
       <div className={classes.left_t}>
