@@ -1,13 +1,20 @@
 import React from "react";
 import classes from "./hero.module.css";
 import Header from "../Header/header";
+import { motion } from "framer-motion";
 const HeroSection = () => {
+  const transition = { type: "spring", duration: 3 };
   return (
     <div className={classes.hero}>
+      <div className="blur hero_blur "></div>
       <div className={classes.left_h}>
         <Header />
         <div className={classes.the_best_ad}>
-          <div></div>
+          <motion.div
+            initial={{ left: "238px" }}
+            whileInView={{ left: "8px" }}
+            transition={{ ...transition, type: "tween" }}
+          ></motion.div>
           <span>The best fitness club in the town</span>
         </div>
 
@@ -51,26 +58,40 @@ const HeroSection = () => {
       </div>
       <div className={classes.right_h}>
         <button className="btn">Join now </button>
-        <div className={classes.heart_rate}>
+        <motion.div
+          className={classes.heart_rate}
+          initial={{ right: "-1rem " }}
+          whileInView={{ right: "4rem" }}
+          transition={transition}
+        >
           <img src="/heart.png" alt="" />
           <span>heart Rate</span>
           <span>116 bpm</span>
-        </div>
+        </motion.div>
 
         {/* hreo images */}
         <img
           src="/hero_image.png"
           alt="ero_image"
           className={classes.hero_image}
+         
         />
-        <img
+        <motion.img
           src="/hero_image_back.png"
           alt="hero_image_back"
           className={classes.hero_image_back}
+          initial={{ right: "11rem " }}
+          whileInView={{ right: "20rem" }}
+          transition={transition}
         />
 
         {/* calories */}
-        <div className={classes.calories}>
+        <motion.div
+          initial={{ right: "-1rem " }}
+          whileInView={{ right: "4rem" }}
+          transition={transition}
+          className={classes.calories}
+        >
           <img
             src="/calories.png"
             alt="hero_image_back"
@@ -80,7 +101,7 @@ const HeroSection = () => {
             <span>Calories burned </span>
             <span>220 Kcal</span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
