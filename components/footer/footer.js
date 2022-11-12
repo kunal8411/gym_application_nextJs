@@ -2,21 +2,77 @@ import React from "react";
 import classes from "./footer.module.css";
 function Footer() {
   return (
-    <div className={classes.footer_container}>
-      <hr />
-      <div className={classes.footer}>
-        <div className={classes.social_links}>
-          <img src="/github.png" />
-          <img src="/instagram.png" />
-          <img src="/linkedin.png" />
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="contact-option">
+              <span>Phone</span>
+              <div>(123) 118 9999 - (123) 118 9999</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-option">
+              <span>Address</span>
+              <p>72 Kangnam, 45 Opal Point Suite 391</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-option">
+              <span>Email</span>
+              <p>contactcompany@Gutim.com</p>
+            </div>
+          </div>
         </div>
-        <div className={classes.logo_f}>
-          <img src="/logo.png" />
+        <div
+          class="subscribe-option set-bg"
+          data-setbg="img/footer-signup.jpg"
+          style={{
+            "background-image": "url(/footer-banner/footer-banner-2.jpg)",
+          }}
+        >
+          <div class="so-text">
+            <h4>Subscribe To Our Mailing List</h4>
+            <p>Sign up to receive the latest information </p>
+          </div>
+          <form action="#" class="subscribe-form">
+            <input type="text" placeholder="Enter Your Mail" />
+            <button type="submit">
+              <i class="fa fa-send"></i>
+            </button>
+          </form>
+        </div>
+        <div class="copyright-text">
+          <ul>
+            <li>
+              <a href="#">Term&Use</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          {/* <p>&copy;<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
+          All rights reserved | This template is made with{" "}
+          <i class="fa fa-heart" aria-hidden="true"></i> by{" "}
+          <a href="https://colorlib.com">Colorlib</a>
+          {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></p> */}
+          <div class="footer-social">
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-dribbble"></i>
+            </a>
+          </div>
         </div>
       </div>
-      <div className="blur blur_f_1"></div>
-      <div className="blur blur_f_2"></div>
-    </div>
+    </footer>
   );
 }
 
