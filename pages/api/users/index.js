@@ -5,18 +5,37 @@ import User from "../../models/User";
 
 export default async function handler(req, res) {
   const { method } = req;
-//   console.log("trying to connect to mongodb");
   let result = await dbConnect();
-//   console.log("after connecting to mongodb", result);
-
-//how to connect to mongodb?
-
   switch (method) {
     case "GET":
-      const users = await User.find({});
+      const allUsers = await User.find()
+        .limit(req.query.limit)
+        .sort({ _id: -1 });
+      const allUsersStats = await User.aggregate([
+        {
+          $group: {
+            _id: "",
+            allPayment: { $sum: "$payment" },
+            totalUsers: {
+              $sum: 1,
+            },
+          },
+        },
+        {
+          $project: {
+            _id: 0,
+            allPayment: "$allPayment",
+            email: "$email",
+            totalUsers: "$totalUsers",
+          },
+        },
+      ]);
+
       try {
-        console.log("hello user");
-        res.status(200).json({ success: true, data: users });
+        res.status(200).json({
+          success: true,
+          data: [{ allUsers, allUsersStats }],
+        });
       } catch (error) {
         res.status(400).json({ success: false });
       }
