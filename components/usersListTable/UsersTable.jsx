@@ -2,7 +2,6 @@ import React from "react";
 import moment from "moment";
 
 function UsersTable(props) {
-  console.log("props are", props.userData);
   return (
     <div className="col-lg-6 mb-lg-0 mb-4">
       <div className="card ">
@@ -36,7 +35,6 @@ function UsersTable(props) {
             </thead>
             <tbody>
               {props?.userData?.map((data, index) => {
-                console.log("datadatadatadata", data);
                 return (
                 //   <div key={index}>
                     <tr key={index}>

@@ -8,6 +8,7 @@ import Link from "next/link";
 function Index(props) {
   useEffect(() => {
   });
+  console.log("props.weeklyUsersDataprops.weeklyUsersDataprops.weeklyUsersData",props.weeklyUsersData);
   return (
     <div className="g-sidenav-show   bg-gray-100">
       <div className="min-height-300 bg-primary position-absolute w-100"></div>
@@ -85,7 +86,7 @@ function Index(props) {
                           Todays Registrations
                         </p>
                         <h5 className="font-weight-bolder">
-                          {props.weeklyUsersData.weeklyUsersStats[0].newUsers}
+                          {props.weeklyUsersData.weeklyUsersStats[0]?.newUsers}
                         </h5>
                         <p className="mb-0">
                           <span className="text-success text-sm font-weight-bolder">
@@ -117,8 +118,7 @@ function Index(props) {
                         <h5 className="font-weight-bolder">
                           $
                           {
-                            props.weeklyUsersData.weeklyUsersStats[0]
-                              .thisWeeksPayment
+                            props.weeklyUsersData.weeklyUsersStats[0]?.thisWeeksPayment
                           }
                         </h5>
                         <p className="mb-0">
@@ -239,16 +239,14 @@ function Index(props) {
 
 // This gets called on every request
 export async function getServerSideProps() {
-  console.log("hello");
   const allusersResponse = await fetch(
     `${process.env.BASE_URL}/api/users?limit=`
   );
-  const weeklyData = await fetch(
+  const weeklyData =  await fetch(
     `${process.env.BASE_URL}/api/users/user-status-by-date`
   );
   const allUsersData = await allusersResponse.json();
   const weeklyUsersData = await weeklyData.json();
-  // console.log("i am called ", await response.json());
   return {
     props: {
       usersData: allUsersData.data[0],

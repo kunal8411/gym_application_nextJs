@@ -52,22 +52,28 @@ function index() {
             </div>
             <div class="col-lg-6">
               <div class="about-text">
-                <h2>Story About Us</h2>
+                <h2>
+                  WHATEVER YOUR GOALS <span>WE’RE HERE TO HELP</span>
+                </h2>
                 <p class="first-para">
-                  Lorem ipsum proin gravida nibh vel velit auctor aliquet.
-                  Aenean pretium sollicitudin, nascetur auci elit consequat
-                  ipsutissem niuis sed odio sit amet nibh vulputate cursus a
-                  amet.
+                  <span>
+                    Absolute Fitness provides a 24/7 Fitness facility to help
+                    people reach and maintain their goals. Our Staff, Trainers &
+                    Group exercise instructors are committed to offering our
+                    members a great fitness experience
+                  </span>
                 </p>
                 <p class="second-para">
-                  Etiam rhoncus. Maecenas tempus, tellus eget condimentum
-                  rhoncus, gravida quam semper libero sit amet.
+                  At Absolute Fitness you’ll find all the latest strength and
+                  cardio equipment along with a energetic group exercise program
+                  that includes POUND, Zumba, Kickboxing, Bootcamp, Muscle
+                  Building and many other cardio classes. You’ll find a
+                  supportive environment with all kinds of people who are
+                  working just as hard as you to meet their goals.
                 </p>
-                <img src="/about-signature.png" alt="" />
-                <div class="at-author">
-                  <h4>Lettie Chavez</h4>
-                  <span>CEO - Founder</span>
-                </div>
+                <a href="#" class="primary-btn">
+                  Read More
+                </a>
               </div>
             </div>
           </div>
@@ -144,10 +150,10 @@ function index() {
           <div class="row">
             <div class="col-lg-6">
               <div class="banner-text">
-                <h2>Get training today</h2>
+                <h2>EVERYBODY IS DIFFERENT. Get training today</h2>
                 <p>
-                  Gimply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry’s standard.
+                Stop waiting to get in shape!
+I will help you sculpt the body that fits your lifestyle and I will help you maintain it through all aspects of life. Why give up the things you love to do? I will walk you through every step of transforming your body from nutrition to exercise all the way down to your molecular structure.
                 </p>
                 <a href="#" class="primary-btn banner-btn">
                   Contact Now

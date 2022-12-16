@@ -19,7 +19,6 @@ export default async function handler(req, res) {
           $lte: new Date(nextWeeksDate),
         },
       });
-      console.log("usersRegistrationsEndingThisWeekusersRegistrationsEndingThisWeek",usersRegistrationsEndingThisWeek);
       const weeklyUsersStats = await User.aggregate([
         {
           $match: {
@@ -47,10 +46,8 @@ export default async function handler(req, res) {
           },
         },
       ]);
-      console.log("weeklyUsersStats-------->>>>>>>>>>>>>", weeklyUsersStats);
 
       try {
-        // console.log("hello i am in get-status-by-date");
         res.status(200).json({ success: true, data: [{usersRegistrationsEndingThisWeek,weeklyUsersStats}] });
       } catch (error) {
         res.status(400).json({ success: false });

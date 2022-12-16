@@ -24,11 +24,19 @@ const HeroSection = () => {
           <div class="row">
             <div class="col-lg-8">
               <div class="hero-text">
-                <span>FITNESS ELEMENTS</span>
-                <h1>BMI CALCULATOR</h1>
+                <span className="">
+                  <h3 style={{ color: "lightblue" }}>FITNESS ELEMENTS</h3>
+                </span>
+                <span>
+                  <h1 style={{ color: "cyan" }}>ABSOLUTE FITNESS</h1>
+                </span>
                 <p>
-                  Gutim comes packed with the user-friendly BMI Calculator
-                  <br /> shortcode which lets
+                  <span className="fs-2 fw-bold text-success"> BUILD</span>
+                  <span className="fs-1 text">YOUR BODY</span>
+                  <br /> <span className="fs-2 text text-info">
+                    TRANSFORM
+                  </span>{" "}
+                  <span className="fs-2 text">YOUR LIFE</span>
                 </p>
                 <a href="#" class="primary-btn">
                   Read More
@@ -57,18 +65,24 @@ const HeroSection = () => {
             </div>
             <div class="col-lg-6">
               <div class="about-text">
-                <h2>Story About Us</h2>
+                <h2>
+                  WHATEVER YOUR GOALS <span>WE’RE HERE TO HELP</span>
+                </h2>
                 <p class="first-para">
-                  Lorem ipsum proin gravida nibh vel velit auctor aliquet.
-                  Aenean pretium sollicitudin, nascetur auci elit consequat
-                  ipsutissem niuis sed odio sit amet nibh vulputate cursus a
-                  amet.
+                  <span>
+                    Absolute Fitness provides a 24/7 Fitness facility to help
+                    people reach and maintain their goals. Our Staff, Trainers &
+                    Group exercise instructors are committed to offering our
+                    members a great fitness experience
+                  </span>
                 </p>
                 <p class="second-para">
-                  Etiam rhoncus. Maecenas tempus, tellus eget condimentum
-                  rhoncus, gravida quam semper libero sit amet. Etiam rhoncus.
-                  Maecenas tempus, tellus eget condimentum rhoncus, gravida quam
-                  semper libero sit amet.
+                  At Absolute Fitness you’ll find all the latest strength and
+                  cardio equipment along with a energetic group exercise program
+                  that includes POUND, Zumba, Kickboxing, Bootcamp, Muscle
+                  Building and many other cardio classes. You’ll find a
+                  supportive environment with all kinds of people who are
+                  working just as hard as you to meet their goals.
                 </p>
                 <a href="#" class="primary-btn">
                   Read More
@@ -81,7 +95,7 @@ const HeroSection = () => {
       {/* <!-- About Section End --> */}
 
       {/* <!-- Services Section Begin -->  */}
-      <section class="services-section">
+      {/* <section class="services-section">
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-6">
@@ -133,7 +147,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!-- Services Section End --> */}
 
       {/* <!-- Classes Section Begin --> */}
@@ -142,7 +156,7 @@ const HeroSection = () => {
           <div class="row">
             <div class="col-lg-12">
               <div class="section-title">
-                <h2>UNLIMITED CLASSES</h2>
+                <h2>OUR CLASSES</h2>
               </div>
             </div>
           </div>
@@ -366,10 +380,10 @@ const HeroSection = () => {
               <div class="testimonial-slider owl-carousel">
                 <div class="testimonial-item">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                    started a week and a half ago and so far its been
+                    brilliant. The PT trainers are all so friendly and
+                    encouraging and genuinely care about getting you to where
+                    you want to be.{" "}
                   </p>
                   <div class="ti-pic">
                     <img src="/testimonial/testimonial-1.jpg" alt="" />
@@ -384,10 +398,9 @@ const HeroSection = () => {
                 </div>
                 <div class="testimonial-item">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                    From the moment you step foot through the door, everything
+                    is bespoke based on your goals, I have without a doubt seen
+                    massive improvements in myself.{" "}
                   </p>
                   <div class="ti-pic">
                     <img src="/testimonial/testimonial-1.jpg" alt="" />
@@ -417,10 +430,16 @@ const HeroSection = () => {
           <div class="row">
             <div class="col-lg-6">
               <div class="banner-text">
-                <h2>Get training today</h2>
+                <h2>EVERYBODY IS DIFFERENT. Get training today</h2>
                 <p>
-                  Gimply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry’s standard.
+                  <span style={{ color: "cyan" }}>
+                    Stop waiting to get in shape!
+                  </span>
+                  <br />I will help you sculpt the body that fits your lifestyle
+                  and I will help you maintain it through all aspects of life.
+                  Why give up the things you love to do? I will walk you through
+                  every step of transforming your body from nutrition to
+                  exercise all the way down to your molecular structure.
                 </p>
                 <a href="#" class="primary-btn banner-btn">
                   Contact Now

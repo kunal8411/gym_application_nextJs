@@ -43,11 +43,9 @@ export default async function handler(req, res) {
     case "POST":
       const user = new User(req.body);
       try {
-        console.log("user", user);
         const result = await user.save();
         res.status(201).json({ success: true, data: result });
       } catch (error) {
-        console.log("error is", error);
         res.status(400).json({ success: false });
       }
       break;
