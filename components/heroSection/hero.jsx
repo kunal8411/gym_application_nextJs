@@ -16,8 +16,23 @@ const HeroSection = () => {
     elmntToView.scrollIntoView();
   };
   const hello = (event) => {
-    event.preventDefault()
-    console.log("hello clicked",event);
+    event.preventDefault();
+    console.log("hello clicked", event);
+  };
+
+  const redirectToAboutSection = async () => {
+    await setHeaderIndex(1);
+    await router.push("/about");
+  };
+  const redirectToContactSection = async () => {
+    await setHeaderIndex(5);
+    await router.push("/contact");
+  };
+  const setHeaderIndex = async (index) => {
+    console.log("setHeaderIndexsetHeaderIndexsetHeaderIndex", index);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("headerTileIndex", index);
+    }
   };
   return (
     <div>
@@ -105,7 +120,7 @@ const HeroSection = () => {
                   working just as hard as you to meet their goals.
                 </p>
                 <a href="#" class="primary-btn">
-                  <button type="submit" onClick={() => router.push("/about")}>
+                  <button type="submit" onClick={redirectToAboutSection}>
                     Read More
                   </button>
                 </a>
@@ -417,7 +432,7 @@ const HeroSection = () => {
                     </div>
                   </div>
                   <div class="ti-author">
-                    <h4>Patrick Cortez</h4>
+                    <h4>David Smith</h4>
                     <span>Leader</span>
                   </div>
                 </div>
@@ -466,9 +481,16 @@ const HeroSection = () => {
                   every step of transforming your body from nutrition to
                   exercise all the way down to your molecular structure.
                 </p>
-                <a href="#" class="primary-btn banner-btn">
+                {/* <a href="#" class="primary-btn banner-btn">
                   Contact Now
-                </a>
+                </a> */}
+                <button
+                  type="submit"
+                  class="primary-btn banner-btn"
+                  onClick={redirectToContactSection}
+                >
+                  Contact Now
+                </button>
               </div>
             </div>
             <div class="col-lg-5">
@@ -598,7 +620,7 @@ const HeroSection = () => {
       {/* <!-- Membership Section End --> */}
 
       {/* <!-- Register Section Begin --> */}
-                <NewREgistrationsSection/>
+      <NewREgistrationsSection />
       {/* <!-- Register Section End --> */}
 
       {/* <!-- Latest Blog Section Begin --> */}

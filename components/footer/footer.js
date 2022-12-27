@@ -128,18 +128,18 @@ function Footer() {
           <a href="https://colorlib.com">Our Team</a>
           {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></p> */}
           <div class="footer-social">
-            <a href="#">
+            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
               <i class="fa fa-facebook"></i>
             </a>
-            <a href="#">
+            <a href="https://twitter.com/login" target="_blank" rel="noreferrer">
               <i class="fa fa-twitter"></i>
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/web_developer_freelancer__/saved/" target="_blank" rel="noreferrer">
               <i class="fa fa-instagram"></i>
             </a>
-            <a href="#">
+            {/* <a href="https://www.instagram.com/web_developer_freelancer__/saved/" target="_blank" rel="noreferrer">
               <i class="fa fa-dribbble"></i>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
