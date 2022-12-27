@@ -21,12 +21,12 @@ function index() {
             <div class="col-lg-12">
               <div class="breadcrumb-text">
                 <h2>Gallery</h2>
-                <div class="breadcrumb-option">
+                {/* <div class="breadcrumb-option">
                   <a href="./index.html">
                     <i class="fa fa-home"></i> Home
                   </a>
                   <span>Gallery</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

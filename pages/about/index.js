@@ -3,7 +3,7 @@ import Header from "../../components/Header/header";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const Index=()=> {
+const Index = () => {
   const router = useRouter();
   return (
     <div>
@@ -75,11 +75,11 @@ const Index=()=> {
                   supportive environment with all kinds of people who are
                   working just as hard as you to meet their goals.
                 </p>
-                <a href="#" class="primary-btn">
+                {/* <a href="#" class="primary-btn">
                 <button type="submit" onClick={() => router.push("/about")}>
                     Read More
                   </button>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -125,16 +125,20 @@ const Index=()=> {
               <div class="award-text">
                 <h2>Best gym award</h2>
                 <p>
-                  Lorem ipsum proin gravida nibh vel velit auctor aliquet.
-                  Aenean pretium sollicitudin, nascetur auci elit consequat
-                  ipsutissem niuis sed odio sit amet nibh vulputate cursus a
-                  amet.
+                  We are very proud to be voted Gym of the Year 2018 at the
+                  biggest fitness industry awards in Asia.Absolute Fitness won
+                  against some of the biggest names in fitness from across Asia,
+                  beating competition from studios and gyms from South Korea,
+                  Hong Kong, Singapore and Malaysia.
                 </p>
                 <p>
-                  Etiam rhoncus. Maecenas tempus, tellus eget condimentum
-                  rhoncus, gravida quam semper libero sit amet. Etiam rhoncus.
-                  Maecenas tempus, tellus eget condimentum rhoncus, gravida quam
-                  semper libero sit amet.
+                  For Absolute Fitness, being awarded Asia’s Gym of the
+                  Year is just the beginning. With big expansion plans on the
+                  horizon these are exciting times for the growing fitness
+                  brand.At the Fitness Best awards ceremony, the biggest of its
+                  kind in Asia’s fitness industry, prizes spanned the whole
+                  industry including Asia’s Personal Trainer of the Year, Yoga
+                  Studio of the Year and Specialized Gym of the Year.
                 </p>
               </div>
             </div>
@@ -330,6 +334,6 @@ const Index=()=> {
       {/* <!-- Js Plugins --> */}
     </div>
   );
-}
+};
 
 export default Index;

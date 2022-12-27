@@ -16,12 +16,12 @@ function index() {
           <div class="row">
             <div class="col-lg-12">
               <div class="breadcrumb-text">
-                <h2>Classes</h2>
+                <h2>CLASSES</h2>
                 {/* <div class="breadcrumb-option">
-                  <a href="./index.html">
-                    <i class="fa fa-home"></i> Home
-                  </a>
-                  <span>Class</span>
+                  <Link href="./index.html">
+                    <i class="fa fa-home"></i> 
+                  </Link>
+                  <span>About Us</span>
                 </div> */}
               </div>
             </div>
@@ -31,7 +31,7 @@ function index() {
       {/* <!-- Breadcrumb Section End --> */}
 
       {/* <!-- Register Section Begin --> */}
-      <NewREgistrationsSection/>
+      {/* <NewREgistrationsSection/> */}
       {/* <!-- Register Section End --> */}
 
       {/* <!-- Classes Section Begin --> */}

@@ -73,8 +73,11 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <a href="#" className="primary-btn signup-btn">
-            Sign Up Today
+
+          <a href="/login" className="primary-btn signup-btn">
+            {/* <Link href="/login"> */}
+            Admin Login
+            {/* </Link> */}
           </a>
         </div>
         <div id="mobile-menu-wrap"></div>

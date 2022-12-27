@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
   const router = useRouter();
-  if (router.pathname.includes("/admin")) {
+  if (router.pathname.includes("/admin")||router.pathname.includes("/login")) {
     return (
       <>
         <main>{children}</main>
