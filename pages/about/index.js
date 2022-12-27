@@ -1,8 +1,10 @@
 import React from "react";
 import Header from "../../components/Header/header";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
-function index() {
+const Index=()=> {
+  const router = useRouter();
   return (
     <div>
       {/* <!-- Header Section Begin --> */}
@@ -43,8 +45,10 @@ function index() {
               <div class="about-pic">
                 <img src="/about-pic.jpg" alt="" />
                 <a
-                  href="https://www.youtube.com/watch?v=SlPhMPnQ58k"
+                  href="https://www.youtube.com/watch?v=xMIKdpgxGQ4&feature=youtu.be"
                   class="play-btn video-popup"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <img src="/play.png" alt="" />
                 </a>
@@ -53,7 +57,7 @@ function index() {
             <div class="col-lg-6">
               <div class="about-text">
                 <h2>
-                  WHATEVER YOUR GOALS <span>WE’RE HERE TO HELP</span>
+                  WHATEVER YOUR GOALS <span>WE ARE HERE TO HELP</span>
                 </h2>
                 <p class="first-para">
                   <span>
@@ -72,7 +76,9 @@ function index() {
                   working just as hard as you to meet their goals.
                 </p>
                 <a href="#" class="primary-btn">
-                  Read More
+                <button type="submit" onClick={() => router.push("/about")}>
+                    Read More
+                  </button>
                 </a>
               </div>
             </div>
@@ -152,8 +158,12 @@ function index() {
               <div class="banner-text">
                 <h2>EVERYBODY IS DIFFERENT. Get training today</h2>
                 <p>
-                Stop waiting to get in shape!
-I will help you sculpt the body that fits your lifestyle and I will help you maintain it through all aspects of life. Why give up the things you love to do? I will walk you through every step of transforming your body from nutrition to exercise all the way down to your molecular structure.
+                  Stop waiting to get in shape! I will help you sculpt the body
+                  that fits your lifestyle and I will help you maintain it
+                  through all aspects of life. Why give up the things you love
+                  to do? I will walk you through every step of transforming your
+                  body from nutrition to exercise all the way down to your
+                  molecular structure.
                 </p>
                 <a href="#" class="primary-btn banner-btn">
                   Contact Now
@@ -186,8 +196,10 @@ I will help you sculpt the body that fits your lifestyle and I will help you mai
                   <h5>Patrick Cortez</h5>
                   <span>Leader</span>
                   <p>
-                    non numquam eius modi tempora incidunt ut labore et dolore
-                    magnam aliquam quaerat voluptatem.
+                    Mr. Patrick Cortez is one of the best certified personal
+                    trainer and nutrition consultant as well as a dietitian. He
+                    has an 8 years experience in the field of nutrition and
+                    fitness industry.
                   </p>
                   <div class="trainer-social">
                     <a href="#">
@@ -213,8 +225,9 @@ I will help you sculpt the body that fits your lifestyle and I will help you mai
                   <h5>Gregory Powers</h5>
                   <span>Gym coach</span>
                   <p>
-                    non numquam eius modi tempora incidunt ut labore et dolore
-                    magnam aliquam quaerat voluptatem.
+                    Based in UK, Gregory Personal Training helps to connect
+                    people who are looking for some help with their health and
+                    fitness with the perfect local trainers for them.
                   </p>
                   <div class="trainer-social">
                     <a href="#">
@@ -240,8 +253,9 @@ I will help you sculpt the body that fits your lifestyle and I will help you mai
                   <h5>Walter Wagner</h5>
                   <span>Dance trainer</span>
                   <p>
-                    non numquam eius modi tempora incidunt ut labore et dolore
-                    magnam aliquam quaerat voluptatem.
+                    Walter Wagner is based at Coastal Fitness in Hong Kong. She
+                    is a health and performance specialist with a background in
+                    competitive volleyball.
                   </p>
                   <div class="trainer-social">
                     <a href="#">
@@ -273,7 +287,9 @@ I will help you sculpt the body that fits your lifestyle and I will help you mai
               <div
                 class="footer-banner-item set-bg"
                 data-setbg="img/footer-banner/footer-banner-1.jpg"
-                style={{ "background-image": "url(/footer-banner/footer-banner-1.jpg)" }}
+                style={{
+                  "background-image": "url(/footer-banner/footer-banner-1.jpg)",
+                }}
               >
                 <span>New member</span>
                 <h2>7 days for free</h2>
@@ -281,26 +297,25 @@ I will help you sculpt the body that fits your lifestyle and I will help you mai
                   Complete the training sessions with us, surely you will be
                   happy
                 </p>
-                <a href="#" class="primary-btn">
+                {/* <a href="#" class="primary-btn">
                   Get Started
-                </a>
+                </a> */}
               </div>
             </div>
             <div class="col-lg-6">
               <div
                 class="footer-banner-item set-bg"
                 data-setbg="img/footer-banner/footer-banner-2.jpg"
-                style={{ "background-image": "url(/footer-banner/footer-banner-2.jpg)" }}
+                style={{
+                  "background-image": "url(/footer-banner/footer-banner-2.jpg)",
+                }}
               >
                 <span>contact us</span>
                 <h2>09 746 204</h2>
-                <p>
-                  If you trust us on your journey they dark sex does not
-                  disappoint you!
-                </p>
-                <a href="#" class="primary-btn">
+                <p>We would love to hear from you.</p>
+                {/* <a href="#" class="primary-btn">
                   Get Started
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -309,7 +324,7 @@ I will help you sculpt the body that fits your lifestyle and I will help you mai
       {/* <!-- Footer Banner Section End --> */}
 
       {/* <!-- Footer Section Begin --> */}
-      
+
       {/* <!-- Footer Section End --> */}
 
       {/* <!-- Js Plugins --> */}
@@ -317,4 +332,4 @@ I will help you sculpt the body that fits your lifestyle and I will help you mai
   );
 }
 
-export default index;
+export default Index;

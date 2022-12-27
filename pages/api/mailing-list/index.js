@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const { MongoClient } = require("mongodb");
 import dbConnect from "../../../utils/dbConnect";
-import Registrations from "../../models/Registrations";
+import MailingList from "../../models/MailingList";
 
 export default async function handler(req, res) {
   const { method } = req;
@@ -9,24 +9,20 @@ export default async function handler(req, res) {
   switch (method) {
     case "GET":
       try {
-        const allRegistrations = await Registrations.find();
-        console.log(
-          "hello i am called ------------<>>>>>>>>><><>>>>>>>>>>>><<<<<<<>>>>>>>><><><><><><><><>",
-          allRegistrations
-        );
-        res.status(200).json({ allRegistrations });
+        const allMailingListEmails = await MailingList.find();
+        res.status(200).json({ allMailingListEmails });
       } catch (error) {
-        res.status(400).json({ success: false });
+        res.status(400).json({ success: false, error: error });
       }
       break;
     case "POST":
-      const newRegistrations = new Registrations(req.body);
+      const newEmailRegistration = new MailingList(req.body);
       try {
-        const result = await newRegistrations.save();
-        console.log("resultresultresult",result);
+        const result = await newEmailRegistration.save();
+        console.log("resultresultresult", result);
         res.status(201).json({ success: true, data: result });
       } catch (error) {
-        res.status(400).json({ success: false });
+        res.status(400).json({ success: false, error: error });
       }
       break;
     default:

@@ -1,4 +1,5 @@
 import React from "react";
+import NewREgistrationsSection from "../../components/newREgistrationsSection";
 
 function index() {
   return (
@@ -7,7 +8,9 @@ function index() {
       <section
         class="breadcrumb-section set-bg"
         data-setbg="img/breadcrumb/classes-breadcrumb.jpg"
-        style={{ "background-image": "url(/breadcrumb/classes-breadcrumb.jpg)" }}
+        style={{
+          "background-image": "url(/breadcrumb/classes-breadcrumb.jpg)",
+        }}
       >
         <div class="container">
           <div class="row">
@@ -28,52 +31,7 @@ function index() {
       {/* <!-- Breadcrumb Section End --> */}
 
       {/* <!-- Register Section Begin --> */}
-      <section class="register-section classes-page spad">
-        <div class="container">
-          <div class="classes-page-text">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="register-text">
-                  <div class="section-title">
-                    <h2>Register Now</h2>
-                    <p>
-                      The First 7 Day Trial Is Completely Free With The Teacher
-                    </p>
-                  </div>
-                  <form action="#" class="register-form">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <label for="name">First Name</label>
-                        <input type="text" id="name" />
-                      </div>
-                      <div class="col-lg-6">
-                        <label for="email">Your email address</label>
-                        <input type="text" id="email" />
-                      </div>
-                      <div class="col-lg-6">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" />
-                      </div>
-                      <div class="col-lg-6">
-                        <label for="mobile">Mobile No*</label>
-                        <input type="text" id="mobile" />
-                      </div>
-                    </div>
-                    <button type="submit" class="register-btn">
-                      Get Started
-                    </button>
-                  </form>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="register-pic">
-                  <img src="/register-pic.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <NewREgistrationsSection/>
       {/* <!-- Register Section End --> */}
 
       {/* <!-- Classes Section Begin --> */}
@@ -400,7 +358,9 @@ function index() {
               <div
                 class="footer-banner-item set-bg"
                 data-setbg="img/footer-banner/footer-banner-1.jpg"
-                style={{ "background-image": "url(/footer-banner/footer-banner-1.jpg)" }}
+                style={{
+                  "background-image": "url(/footer-banner/footer-banner-1.jpg)",
+                }}
               >
                 <span>New member</span>
                 <h2>7 days for free</h2>
@@ -408,26 +368,25 @@ function index() {
                   Complete the training sessions with us, surely you will be
                   happy
                 </p>
-                <a href="#" class="primary-btn">
+                {/* <a href="#" class="primary-btn">
                   Get Started
-                </a>
+                </a> */}
               </div>
             </div>
             <div class="col-lg-6">
               <div
                 class="footer-banner-item set-bg"
                 data-setbg="img/footer-banner/footer-banner-2.jpg"
-                style={{ "background-image": "url(/footer-banner/footer-banner-2.jpg)" }}
+                style={{
+                  "background-image": "url(/footer-banner/footer-banner-2.jpg)",
+                }}
               >
                 <span>contact us</span>
                 <h2>09 746 204</h2>
-                <p>
-                  If you trust us on your journey they dark sex does not
-                  disappoint you!
-                </p>
-                <a href="#" class="primary-btn">
+                <p>We would love to hear from you.</p>
+                {/* <a href="#" class="primary-btn">
                   Get Started
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

@@ -1,6 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
+
 import classes from "./footer.module.css";
 function Footer() {
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const validEmailRegex = RegExp(
+    /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+  );
+  const setEmailAddress = (e) => {
+    let errorMessage = validEmailRegex.test(e.target.value)
+      ? ""
+      : "Email is not valid!";
+    setEmailError(errorMessage);
+    setEmail(e.target.value);
+  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (email.length > 0) {
+      await axios
+        .post("/api/mailing-list", {
+          email: email,
+        })
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log("error is ,", error);
+        });
+      setEmail("");
+      toast.success("Email subscribed successfully", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    } else {
+      toast.error("Please enter correct email Id", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
+  };
   return (
     <footer class="footer-section">
       <div class="container">
@@ -20,7 +72,7 @@ function Footer() {
           <div class="col-md-4">
             <div class="contact-option">
               <span>Email</span>
-              <p>contactcompany@Gutim.com</p>
+              <p>absolutefitness@gmail.com</p>
             </div>
           </div>
         </div>
@@ -35,8 +87,27 @@ function Footer() {
             <h4>Subscribe To Our Mailing List</h4>
             <p>Sign up to receive the latest information </p>
           </div>
-          <form action="#" class="subscribe-form">
-            <input type="text" placeholder="Enter Your Mail" />
+          <form
+            action="#"
+            class="subscribe-form"
+            onSubmit={handleSubmit}
+            noValidate
+          >
+            {/* <input type="text" placeholder="Enter Your Mail" /> */}
+
+            {/* <label htmlFor="emailList">Last Name*</label> */}
+            <input
+              type="text"
+              id="emailList"
+              onChange={setEmailAddress}
+              noValidate
+              name="emailList"
+              value={email}
+              placeholder="Enter Your Mail"
+            />
+            {emailError.length > 0 && (
+              <span className="error">{emailError}</span>
+            )}
             <button type="submit">
               <i class="fa fa-send"></i>
             </button>
@@ -54,7 +125,7 @@ function Footer() {
           {/* <p>&copy;<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
           All rights reserved | This template is made with{" "}
           <i class="fa fa-heart" aria-hidden="true"></i> by{" "}
-          <a href="https://colorlib.com">Colorlib</a>
+          <a href="https://colorlib.com">Our Team</a>
           {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></p> */}
           <div class="footer-social">
             <a href="#">

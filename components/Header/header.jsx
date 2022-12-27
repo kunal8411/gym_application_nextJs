@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 const Header = () => {
   const [headerIndex, setheaderIndex] = useState(0);
-  console.log("headerIndexheaderIndexheaderIndexheaderIndex", headerIndex);
   return (
     <header className="header-section">
       <div className="container">

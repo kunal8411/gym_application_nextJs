@@ -5,9 +5,20 @@ import Footer from "../footer/footer";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
-
+import { useRouter } from "next/router";
+import NewREgistrationsSection from "../newREgistrationsSection";
 const HeroSection = () => {
+  const router = useRouter();
   const transition = { type: "spring", duration: 3 };
+  const joinNowScroll = () => {
+    console.log("i am clicked");
+    var elmntToView = document.getElementById("register_section");
+    elmntToView.scrollIntoView();
+  };
+  const hello = (event) => {
+    event.preventDefault()
+    console.log("hello clicked",event);
+  };
   return (
     <div>
       {/* <!-- Header Section Begin --> */}
@@ -38,9 +49,16 @@ const HeroSection = () => {
                   </span>{" "}
                   <span className="fs-2 text">YOUR LIFE</span>
                 </p>
-                <a href="#" class="primary-btn">
-                  Read More
-                </a>
+                {/* <a href="" class="primary-btn"> */}
+                <button
+                  type="submit"
+                  class="primary-btn"
+                  onClick={joinNowScroll}
+                >
+                  JOIN NOW
+                </button>
+
+                {/* </a> */}
               </div>
             </div>
           </div>
@@ -56,8 +74,10 @@ const HeroSection = () => {
               <div class="about-pic">
                 <img src="/about-pic.jpg" alt="" />
                 <a
-                  href="https://www.youtube.com/watch?v=SlPhMPnQ58k"
+                  href="https://www.youtube.com/watch?v=xMIKdpgxGQ4&feature=youtu.be"
                   class="play-btn video-popup"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <img src="/play.png" alt="" />
                 </a>
@@ -66,7 +86,7 @@ const HeroSection = () => {
             <div class="col-lg-6">
               <div class="about-text">
                 <h2>
-                  WHATEVER YOUR GOALS <span>WE’RE HERE TO HELP</span>
+                  WHATEVER YOUR GOALS <span>WE ARE HERE TO HELP</span>
                 </h2>
                 <p class="first-para">
                   <span>
@@ -85,7 +105,9 @@ const HeroSection = () => {
                   working just as hard as you to meet their goals.
                 </p>
                 <a href="#" class="primary-btn">
-                  Read More
+                  <button type="submit" onClick={() => router.push("/about")}>
+                    Read More
+                  </button>
                 </a>
               </div>
             </div>
@@ -286,8 +308,10 @@ const HeroSection = () => {
                   <h5>Patrick Cortez</h5>
                   <span>Leader</span>
                   <p>
-                    non numquam eius modi tempora incidunt ut labore et dolore
-                    magnam aliquam quaerat voluptatem.
+                    Mr. Patrick Cortez is one of the best certified personal
+                    trainer and nutrition consultant as well as a dietitian. He
+                    has an 8 years experience in the field of nutrition and
+                    fitness industry.
                   </p>
                   <div class="trainer-social">
                     <a href="#">
@@ -313,8 +337,9 @@ const HeroSection = () => {
                   <h5>Gregory Powers</h5>
                   <span>Gym coach</span>
                   <p>
-                    non numquam eius modi tempora incidunt ut labore et dolore
-                    magnam aliquam quaerat voluptatem.
+                    Based in UK, Gregory Personal Training helps to connect
+                    people who are looking for some help with their health and
+                    fitness with the perfect local trainers for them.
                   </p>
                   <div class="trainer-social">
                     <a href="#">
@@ -340,8 +365,9 @@ const HeroSection = () => {
                   <h5>Walter Wagner</h5>
                   <span>Dance trainer</span>
                   <p>
-                    non numquam eius modi tempora incidunt ut labore et dolore
-                    magnam aliquam quaerat voluptatem.
+                    Walter Wagner is based at Coastal Fitness in Hong Kong. She
+                    is a health and performance specialist with a background in
+                    competitive volleyball.
                   </p>
                   <div class="trainer-social">
                     <a href="#">
@@ -380,10 +406,9 @@ const HeroSection = () => {
               <div class="testimonial-slider owl-carousel">
                 <div class="testimonial-item">
                   <p>
-                    started a week and a half ago and so far its been
-                    brilliant. The PT trainers are all so friendly and
-                    encouraging and genuinely care about getting you to where
-                    you want to be.{" "}
+                    started a week and a half ago and so far its been brilliant.
+                    The PT trainers are all so friendly and encouraging and
+                    genuinely care about getting you to where you want to be.{" "}
                   </p>
                   <div class="ti-pic">
                     <img src="/testimonial/testimonial-1.jpg" alt="" />
@@ -471,17 +496,15 @@ const HeroSection = () => {
                   <h4>Basic</h4>
                   <div class="triangle"></div>
                 </div>
-                <h2 class="mi-price">
-                  $17<span>/01 mo</span>
-                </h2>
+                <h2 class="mi-price">&#8377; 1500</h2>
                 <ul>
                   <li>
                     <p>Duration</p>
-                    <span>12 months</span>
+                    <span>1 months</span>
                   </li>
                   <li>
                     <p>Personal trainer</p>
-                    <span>00 person</span>
+                    <span>No</span>
                   </li>
                   <li>
                     <p>Amount of people</p>
@@ -489,12 +512,16 @@ const HeroSection = () => {
                   </li>
                   <li>
                     <p>Number of visits</p>
-                    <span>Unlimited</span>
+                    <span>1/Day</span>
                   </li>
                 </ul>
-                <a href="#" class="primary-btn membership-btn">
-                  Start Now
-                </a>
+                {/* <button
+                  type="submit"
+                  class="primary-btn membership-btn"
+                  onClick={joinNowScroll}
+                >
+                  START NOW
+                </button> */}
               </div>
             </div>
             <div class="col-lg-4">
@@ -503,17 +530,15 @@ const HeroSection = () => {
                   <h4>Standard</h4>
                   <div class="triangle"></div>
                 </div>
-                <h2 class="mi-price">
-                  $57<span>/01 mo</span>
-                </h2>
+                <h2 class="mi-price">&#8377; 4000</h2>
                 <ul>
                   <li>
                     <p>Duration</p>
-                    <span>12 months</span>
+                    <span>3 months</span>
                   </li>
                   <li>
                     <p>Personal trainer</p>
-                    <span>01 person</span>
+                    <span>No</span>
                   </li>
                   <li>
                     <p>Amount of people</p>
@@ -521,12 +546,16 @@ const HeroSection = () => {
                   </li>
                   <li>
                     <p>Number of visits</p>
-                    <span>Unlimited</span>
+                    <span>2/Day</span>
                   </li>
                 </ul>
-                <a href="#" class="primary-btn membership-btn">
-                  Start Now
-                </a>
+                {/* <button
+                  type="submit"
+                  class="primary-btn membership-btn"
+                  onClick={joinNowScroll}
+                >
+                  START NOW
+                </button> */}
               </div>
             </div>
             <div class="col-lg-4">
@@ -535,9 +564,7 @@ const HeroSection = () => {
                   <h4>Premium</h4>
                   <div class="triangle"></div>
                 </div>
-                <h2 class="mi-price">
-                  $98<span>/01 mo</span>
-                </h2>
+                <h2 class="mi-price">&#8377; 12000</h2>
                 <ul>
                   <li>
                     <p>Duration</p>
@@ -545,7 +572,7 @@ const HeroSection = () => {
                   </li>
                   <li>
                     <p>Personal trainer</p>
-                    <span>01 person</span>
+                    <span>Yes</span>
                   </li>
                   <li>
                     <p>Amount of people</p>
@@ -556,9 +583,13 @@ const HeroSection = () => {
                     <span>Unlimited</span>
                   </li>
                 </ul>
-                <a href="#" class="primary-btn membership-btn">
-                  Start Now
-                </a>
+                {/* <button
+                  type="submit"
+                  class="primary-btn membership-btn"
+                  onClick={joinNowScroll}
+                >
+                  START NOW
+                </button> */}
               </div>
             </div>
           </div>
@@ -567,50 +598,7 @@ const HeroSection = () => {
       {/* <!-- Membership Section End --> */}
 
       {/* <!-- Register Section Begin --> */}
-      <section class="register-section spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="register-text">
-                <div class="section-title">
-                  <h2>Register Now</h2>
-                  <p>
-                    The First 7 Day Trial Is Completely Free With The Teacher
-                  </p>
-                </div>
-                <form action="#" class="register-form">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <label for="name">First Name</label>
-                      <input type="text" id="name" />
-                    </div>
-                    <div class="col-lg-6">
-                      <label for="email">Your email address</label>
-                      <input type="text" id="email" />
-                    </div>
-                    <div class="col-lg-6">
-                      <label for="last-name">Last Name</label>
-                      <input type="text" id="last-name" />
-                    </div>
-                    <div class="col-lg-6">
-                      <label for="mobile">Mobile No*</label>
-                      <input type="text" id="mobile" />
-                    </div>
-                  </div>
-                  <button type="submit" class="register-btn">
-                    Get Started
-                  </button>
-                </form>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="register-pic">
-                <img src="/register-pic.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                <NewREgistrationsSection/>
       {/* <!-- Register Section End --> */}
 
       {/* <!-- Latest Blog Section Begin --> */}
@@ -689,9 +677,9 @@ const HeroSection = () => {
                   Complete the training sessions with us, surely you will be
                   happy
                 </p>
-                <a href="#" class="primary-btn">
+                {/* <a href="#" class="primary-btn">
                   Get Started
-                </a>
+                </a> */}
               </div>
             </div>
             <div class="col-lg-6">
@@ -704,13 +692,10 @@ const HeroSection = () => {
               >
                 <span>contact us</span>
                 <h2>09 746 204</h2>
-                <p>
-                  If you trust us on your journey they dark sex does not
-                  disappoint you!
-                </p>
-                <a href="#" class="primary-btn">
+                <p>We would love to hear from you.</p>
+                {/* <a href="#" class="primary-btn">
                   Get Started
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
