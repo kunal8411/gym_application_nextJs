@@ -40,7 +40,6 @@ export default async function handler(req, res) {
       break;
     case "POST":
       const { email, password } = req.body;
-      console.log(" process.env.PASSWORD_SECRET", process.env.PASSWORD_SECRET);
       const newAdmin = new Admin({
         email: email,
         password: CryptoJS.AES.encrypt(

@@ -19,7 +19,6 @@ export default async function handler(req, res) {
       const newRegistrations = new Registrations(req.body);
       try {
         const result = await newRegistrations.save();
-        console.log("resultresultresult",result);
         res.status(201).json({ success: true, data: result });
       } catch (error) {
         res.status(400).json({ success: false });

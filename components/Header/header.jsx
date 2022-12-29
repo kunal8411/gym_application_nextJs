@@ -52,13 +52,7 @@ const Header = () => {
     }
     init();
   });
-  // if (typeof window !== "undefined") {
-  //   const currentLoggedInUser = localStorage.getItem(
-  //     "currentLoggedInUser"
-  //   );
-  //   console.log(currentLoggedInUser);
-  // }
-  console.log("currnetLoggedInUser",currnetLoggedInUser);
+  
   return (
     <header className="header-section">
       <div className="container">

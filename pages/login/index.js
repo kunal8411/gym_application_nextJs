@@ -26,7 +26,6 @@ const Index = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const currentLoggedInUser = localStorage.getItem("currentLoggedInUser");
-      console.log("currentLoggedInUsercur", typeof currentLoggedInUser);
       if (typeof currentLoggedInUser === "string") {
         setLoggedInState(true);
       }
