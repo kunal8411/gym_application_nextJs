@@ -10,10 +10,6 @@ export default async function handler(req, res) {
     case "GET":
       try {
         const allRegistrations = await Registrations.find();
-        console.log(
-          "hello i am called ------------<>>>>>>>>><><>>>>>>>>>>>><<<<<<<>>>>>>>><><><><><><><><>",
-          allRegistrations
-        );
         res.status(200).json({ allRegistrations });
       } catch (error) {
         res.status(400).json({ success: false });

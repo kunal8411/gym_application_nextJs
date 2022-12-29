@@ -4,32 +4,61 @@ import Link from "next/link";
 import { useState } from "react";
 import { get } from "lodash";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
+
 const Header = () => {
+  const router = useRouter();
   // const [headerIndex, setheaderIndex] = useState(
   //   typeof window !== "undefined" && localStorage.getItem("headerIndex")
   //     ? localStorage.getItem("headerIndex")
   //     : 0
   // );
   const [headerIndex, setheaderIndex] = useState(0);
+  const [currnetLoggedInUser, setCurrentLoggedInUser] = useState({});
   const setHeaderIndexInLocalStorage = (index) => {
     if (typeof window !== "undefined") {
       localStorage.setItem("headerTileIndex", index);
     }
     setheaderIndex(index);
   };
+  const redirectToLoginPage = async () => {
+    await router.push("/login");
+  };
+  const removeUserFromLS = async () => {
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("currentLoggedInUser");
+      // localStorage.setItem("currentLoggedInUser", {});
+      setCurrentLoggedInUser({});
+      await router.push("/");
+    }
+  };
 
   useEffect(() => {
     async function init() {
-      console.log("init called", localStorage.getItem("headerTileIndex"));
       if (typeof window !== "undefined") {
         const headerIndex = localStorage.getItem("headerTileIndex");
         setheaderIndex(parseInt(headerIndex));
+        if (
+          currnetLoggedInUser !== undefined &&
+          currnetLoggedInUser !== null &&
+          Object.keys(currnetLoggedInUser).length === 0
+        ) {
+          const currentLoggedInUser = localStorage.getItem(
+            "currentLoggedInUser"
+          );
+          setCurrentLoggedInUser(JSON.parse(currentLoggedInUser));
+        }
       }
-      // setCart(JSON.parse(headerIndex));
     }
     init();
   });
-  console.log("vsdfvgsdfgsdgdfgdfgds", typeof headerIndex);
+  // if (typeof window !== "undefined") {
+  //   const currentLoggedInUser = localStorage.getItem(
+  //     "currentLoggedInUser"
+  //   );
+  //   console.log(currentLoggedInUser);
+  // }
+  console.log("currnetLoggedInUser",currnetLoggedInUser);
   return (
     <header className="header-section">
       <div className="container">
@@ -74,11 +103,23 @@ const Header = () => {
             </ul>
           </nav>
 
-          <a href="/login" className="primary-btn signup-btn">
-            {/* <Link href="/login"> */}
-            Admin Login
-            {/* </Link> */}
-          </a>
+          {currnetLoggedInUser !== undefined &&
+          currnetLoggedInUser !== null &&
+          Object.keys(currnetLoggedInUser).length > 0 ? (
+            <a
+              className="primary-btn signup-btn cursor-pointer"
+              onClick={removeUserFromLS}
+            >
+              Logout
+            </a>
+          ) : (
+            <a
+              className="primary-btn signup-btn cursor-pointer"
+              onClick={redirectToLoginPage}
+            >
+              Admin Login
+            </a>
+          )}
         </div>
         <div id="mobile-menu-wrap"></div>
       </div>

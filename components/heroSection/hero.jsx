@@ -11,13 +11,8 @@ const HeroSection = () => {
   const router = useRouter();
   const transition = { type: "spring", duration: 3 };
   const joinNowScroll = () => {
-    console.log("i am clicked");
     var elmntToView = document.getElementById("register_section");
     elmntToView.scrollIntoView();
-  };
-  const hello = (event) => {
-    event.preventDefault();
-    console.log("hello clicked", event);
   };
 
   const redirectToAboutSection = async () => {
@@ -29,7 +24,6 @@ const HeroSection = () => {
     await router.push("/contact");
   };
   const setHeaderIndex = async (index) => {
-    console.log("setHeaderIndexsetHeaderIndexsetHeaderIndex", index);
     if (typeof window !== "undefined") {
       localStorage.setItem("headerTileIndex", index);
     }
