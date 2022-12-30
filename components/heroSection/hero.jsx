@@ -437,7 +437,7 @@ const HeroSection = () => {
                     massive improvements in myself.{" "}
                   </p>
                   <div class="ti-pic">
-                    <img src="/testimonial/testimonial-1.jpg" alt="" />
+                    <img src="/testimonial/anthony.jpg" alt="" />
                     <div class="quote">
                       <img src="/testimonial/quote-left.png" alt="" />
                     </div>
