@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import UsersTable from "../../components/usersListTable/UsersTable";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
 import Link from "next/link";
 function Index(props) {
   const router = useRouter();
