@@ -3,9 +3,11 @@ import { useRouter } from "next/router";
 import UsersTable from "../../components/usersListTable/UsersTable";
 
 import Link from "next/link";
+import axios from "axios";
 function Index(props) {
   const router = useRouter();
-
+  const [usersData, setusersData] = useState({});
+  const [weeklyUsersData, setWeeklyUsersData] = useState({});
   const [isAlreadyLoggedIn, setLoggedInState] = useState(false);
 
   useEffect(() => {
@@ -14,11 +16,34 @@ function Index(props) {
       if (typeof currentLoggedInUser === "string") {
         setLoggedInState(true);
       } else {
-        router.push("/contact");
+        router.push("/");
       }
     }
+    async function fetchData() {
+      const allusersResponse = await axios.get(`/api/users?limit=`);
+      const weeklyData = await axios.get(`/api/users/user-status-by-date`);
+      if (
+        allusersResponse &&
+        allusersResponse.data &&
+        allusersResponse.data.data &&
+        allusersResponse.data.data.length > 0
+      ) {
+        setusersData(allusersResponse.data.data[0]);
+      }
+      if (
+        weeklyData &&
+        weeklyData.data &&
+        weeklyData.data.data &&
+        weeklyData.data.data.length > 0
+      ) {
+        setWeeklyUsersData(weeklyData.data.data[0]);
+      }
+    }
+    fetchData();
   }, []);
-
+  if (usersData && Object.keys(usersData).length === 0) {
+    return <div>Loading....</div>;
+  }
   return (
     <div className="g-sidenav-show   bg-gray-100">
       <div className="min-height-300 bg-primary position-absolute w-100"></div>
@@ -63,7 +88,7 @@ function Index(props) {
                           Total Members
                         </p>
                         <h5 className="font-weight-bolder">
-                          {props.usersData.allUsersStats[0].totalUsers}
+                          {usersData?.allUsersStats[0].totalUsers}
                         </h5>
                         <p className="mb-0">
                           <span className="text-success text-sm font-weight-bolder">
@@ -93,8 +118,7 @@ function Index(props) {
                           Todays Registrations
                         </p>
                         <h5 className="">
-                          {props.weeklyUsersData.weeklyUsersStats[0]
-                            ?.newUsers || 0}
+                          {weeklyUsersData?.weeklyUsersStats[0]?.newUsers || 0}
                         </h5>
 
                         <p className="mb-0">
@@ -127,7 +151,7 @@ function Index(props) {
                         <h5 className="font-weight-bolder">
                           $
                           {
-                            props.weeklyUsersData.weeklyUsersStats[0]
+                            weeklyUsersData?.weeklyUsersStats[0]
                               ?.thisWeeksPayment
                           }
                         </h5>
@@ -159,7 +183,7 @@ function Index(props) {
                           Total revenue
                         </p>
                         <h5 className="font-weight-bolder">
-                          ${props.usersData.allUsersStats[0].allPayment}
+                          ${usersData?.allUsersStats[0].allPayment}
                         </h5>
                         <p className="mb-0">
                           <span className="text-success text-sm font-weight-bolder">
@@ -184,13 +208,10 @@ function Index(props) {
           <div className="row mt-4">
             <UsersTable
               title={"Clients registration ending this week"}
-              userData={props.weeklyUsersData.usersRegistrationsEndingThisWeek}
+              userData={weeklyUsersData?.usersRegistrationsEndingThisWeek}
             />
 
-            <UsersTable
-              userData={props.usersData.allUsers}
-              title={"All Clients"}
-            />
+            <UsersTable userData={usersData?.allUsers} title={"All Clients"} />
           </div>
         </div>
       </main>
@@ -198,22 +219,6 @@ function Index(props) {
   );
 }
 
-// This gets called on every request
-export async function getServerSideProps() {
-  const allusersResponse = await fetch(
-    `${process.env.BASE_URL}/api/users?limit=`
-  );
-  const weeklyData = await fetch(
-    `${process.env.BASE_URL}/api/users/user-status-by-date`
-  );
-  const allUsersData = await allusersResponse.json();
-  const weeklyUsersData = await weeklyData.json();
-  return {
-    props: {
-      usersData: allUsersData.data[0],
-      weeklyUsersData: weeklyUsersData.data[0],
-    },
-  };
-}
+
 
 export default Index;
