@@ -1,18 +1,12 @@
 import React from "react";
-import classes from "./header.module.css";
 import Link from "next/link";
 import { useState } from "react";
-import { get } from "lodash";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 const Header = () => {
   const router = useRouter();
-  // const [headerIndex, setheaderIndex] = useState(
-  //   typeof window !== "undefined" && localStorage.getItem("headerIndex")
-  //     ? localStorage.getItem("headerIndex")
-  //     : 0
-  // );
+
   const [headerIndex, setheaderIndex] = useState(0);
   const [currnetLoggedInUser, setCurrentLoggedInUser] = useState({});
   const setHeaderIndexInLocalStorage = (index) => {
@@ -27,7 +21,6 @@ const Header = () => {
   const removeUserFromLS = async () => {
     if (typeof window !== "undefined") {
       localStorage.removeItem("currentLoggedInUser");
-      // localStorage.setItem("currentLoggedInUser", {});
       setCurrentLoggedInUser({});
       await router.push("/");
     }
@@ -52,7 +45,7 @@ const Header = () => {
     }
     init();
   });
-  
+
   return (
     <header className="header-section">
       <div className="container">

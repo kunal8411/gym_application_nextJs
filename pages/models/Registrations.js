@@ -19,7 +19,3 @@ const RegistrationSchema = new mongoose.Schema(
 export default mongoose.models["Registrations"] ||
   mongoose.model("Registrations", RegistrationSchema);
 
-// module.exports = mongoose.model('users', RegistrationSchema);
-// const User = mongoose.model("User", RegistrationSchema);
-
-// module.exports = User;

@@ -20,7 +20,3 @@ const UserSchema = new mongoose.Schema({
 
 export default mongoose.models['Users'] || mongoose.model('Users', UserSchema);
 
-// module.exports = mongoose.model('users', UserSchema);          
-// const User = mongoose.model("User", UserSchema);
-
-// module.exports = User;

@@ -1,17 +1,11 @@
 import React from "react";
-import Header from "../../components/Header/header";
-import Link from "next/link";
+
 import { useRouter } from "next/router";
 
 const Index = () => {
   const router = useRouter();
   return (
     <div>
-      {/* <!-- Header Section Begin --> */}
-
-      {/* <!-- Header End --> */}
-      {/* <Header /> */}
-      {/* <!-- Breadcrumb Section Begin --> */}
       <section
         class="breadcrumb-section set-bg"
         data-setbg="img/breadcrumb/classes-breadcrumb.jpg"
@@ -24,20 +18,12 @@ const Index = () => {
             <div class="col-lg-12">
               <div class="breadcrumb-text">
                 <h2>About Us</h2>
-                {/* <div class="breadcrumb-option">
-                  <Link href="./index.html">
-                    <i class="fa fa-home"></i> 
-                  </Link>
-                  <span>About Us</span>
-                </div> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* <!-- Breadcrumb Section End --> */}
 
-      {/* <!-- About Section Begin --> */}
       <section class="about-section about-page spad">
         <div class="container">
           <div class="row">
@@ -75,19 +61,12 @@ const Index = () => {
                   supportive environment with all kinds of people who are
                   working just as hard as you to meet their goals.
                 </p>
-                {/* <a href="#" class="primary-btn">
-                <button type="submit" onClick={() => router.push("/about")}>
-                    Read More
-                  </button>
-                </a> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* <!-- About Section End --> */}
 
-      {/* <!-- About Counter Section Begin --> */}
       <div class="about-counter">
         <div class="container">
           <div class="row">
@@ -115,9 +94,7 @@ const Index = () => {
           </div>
         </div>
       </div>
-      {/* <!-- About Counter Section End --> */}
 
-      {/* <!-- Gym Award Section Begin --> */}
       <section class="gym-award spad">
         <div class="container">
           <div class="row">
@@ -132,13 +109,13 @@ const Index = () => {
                   Hong Kong, Singapore and Malaysia.
                 </p>
                 <p>
-                  For Absolute Fitness, being awarded Asia’s Gym of the
-                  Year is just the beginning. With big expansion plans on the
-                  horizon these are exciting times for the growing fitness
-                  brand.At the Fitness Best awards ceremony, the biggest of its
-                  kind in Asia’s fitness industry, prizes spanned the whole
-                  industry including Asia’s Personal Trainer of the Year, Yoga
-                  Studio of the Year and Specialized Gym of the Year.
+                  For Absolute Fitness, being awarded Asia’s Gym of the Year is
+                  just the beginning. With big expansion plans on the horizon
+                  these are exciting times for the growing fitness brand.At the
+                  Fitness Best awards ceremony, the biggest of its kind in
+                  Asia’s fitness industry, prizes spanned the whole industry
+                  including Asia’s Personal Trainer of the Year, Yoga Studio of
+                  the Year and Specialized Gym of the Year.
                 </p>
               </div>
             </div>
@@ -148,9 +125,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      {/* <!-- Gym Award Section End --> */}
 
-      {/* <!-- Banner Section Begin --> */}
       <section
         class="banner-section set-bg"
         data-setbg="img/banner-bg.jpg"
@@ -180,9 +155,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      {/* <!-- Banner Section End --> */}
 
-      {/* <!-- Trainer Section Begin --> */}
       <section class="trainer-section about-trainer spad">
         <div class="container">
           <div class="row">
@@ -281,9 +254,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      {/* <!-- Trainer Section End --> */}
 
-      {/* <!-- Footer Banner Section Begin --> */}
       <section class="footer-banner">
         <div class="container-fluid">
           <div class="row">
@@ -301,9 +272,6 @@ const Index = () => {
                   Complete the training sessions with us, surely you will be
                   happy
                 </p>
-                {/* <a href="#" class="primary-btn">
-                  Get Started
-                </a> */}
               </div>
             </div>
             <div class="col-lg-6">
@@ -317,21 +285,11 @@ const Index = () => {
                 <span>contact us</span>
                 <h2>09 746 204</h2>
                 <p>We would love to hear from you.</p>
-                {/* <a href="#" class="primary-btn">
-                  Get Started
-                </a> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* <!-- Footer Banner Section End --> */}
-
-      {/* <!-- Footer Section Begin --> */}
-
-      {/* <!-- Footer Section End --> */}
-
-      {/* <!-- Js Plugins --> */}
     </div>
   );
 };

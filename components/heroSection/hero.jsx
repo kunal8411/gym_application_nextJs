@@ -30,16 +30,10 @@ const HeroSection = () => {
   };
   return (
     <div>
-      {/* <!-- Header Section Begin --> */}
-      {/* <Header /> */}
-      {/* <!-- Header End --> */}
-
-      {/* <!-- Hero Section Begin --> */}
       <section
         class="hero-section set-bg"
         style={{ "background-image": "url(/hero-bg.jpg)" }}
       >
-        {/* <img cl src='/hero-bg.jpg'/> */}
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
@@ -58,7 +52,6 @@ const HeroSection = () => {
                   </span>{" "}
                   <span className="fs-2 text">YOUR LIFE</span>
                 </p>
-                {/* <a href="" class="primary-btn"> */}
                 <button
                   type="submit"
                   class="primary-btn"
@@ -66,16 +59,12 @@ const HeroSection = () => {
                 >
                   JOIN NOW
                 </button>
-
-                {/* </a> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* <!-- Hero Section End --> */}
 
-      {/* *<!-- About Section Begin --> */}
       <section class="about-section spad">
         <div class="container">
           <div class="row">
@@ -123,65 +112,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      {/* <!-- About Section End --> */}
 
-      {/* <!-- Services Section Begin -->  */}
-      {/* <section class="services-section">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="services-pic">
-                <img src="/service-pic.jpg" alt="" />
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="service-items">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="services-item bg-gray">
-                      <img src="/service-icon-1.png" alt="" />
-                      <h4>Strategies</h4>
-                      <p>
-                        Aenean massa. Cum sociis Theme et natoque penatibus et
-                        magnis dis part urient montes.
-                      </p>
-                    </div>
-                    <div class="services-item bg-gray pd-b">
-                      <img src="/service-icon-3.png" alt="" />
-                      <h4>Workout</h4>
-                      <p>
-                        Aenean massa. Cum sociis Theme et natoque penatibus et
-                        magnis dis part urient montes.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="services-item">
-                      <img src="/service-icon-2.png" alt="" />
-                      <h4>Yoga</h4>
-                      <p>
-                        Aenean massa. Cum sociis Theme et natoque penatibus et
-                        magnis dis part urient montes.
-                      </p>
-                    </div>
-                    <div class="services-item pd-b">
-                      <img src="/service-icon-4.png" alt="" />
-                      <h4>Weight Loss</h4>
-                      <p>
-                        Aenean massa. Cum sociis Theme et natoque penatibus et
-                        magnis dis part urient montes.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      {/* <!-- Services Section End --> */}
-
-      {/* <!-- Classes Section Begin --> */}
       <section class="classes-section spad">
         <div class="container">
           <div class="row">
@@ -196,7 +127,6 @@ const HeroSection = () => {
               <div
                 class="single-class-item set-bg"
                 style={{ "background-image": "url(/classes-1.jpg)" }}
-                // data-setbg="img/classes/classes-1.jpg"
               >
                 <div class="si-text">
                   <h4>Yoga</h4>
@@ -207,7 +137,6 @@ const HeroSection = () => {
               </div>
               <div
                 class="single-class-item set-bg"
-                // data-setbg="img/classes/classes-4.jpg"
                 style={{ "background-image": "url(/classes-4.jpg)" }}
               >
                 <div class="si-text">
@@ -221,7 +150,6 @@ const HeroSection = () => {
             <div class="col-lg-4">
               <div
                 class="single-class-item set-bg"
-                // data-setbg="img/classes/classes-2.jpg"
                 style={{ "background-image": "url(/classes-2.jpg)" }}
               >
                 <div class="si-text">
@@ -233,7 +161,6 @@ const HeroSection = () => {
               </div>
               <div
                 class="single-class-item set-bg"
-                // data-setbg="img/classes/classes-5.jpg"
                 style={{ "background-image": "url(/classes-5.jpg)" }}
               >
                 <div class="si-text">
@@ -244,34 +171,10 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            {/* <div class="col-lg-4">
-              <div
-                class="single-class-item set-bg"
-                style={{ "background-image": "url(/classes-3.jpg)" }}
-              >
-                <div class="si-text">
-                  <h4>Personal Training</h4>
-                  <span>
-                    <i class="fa fa-user"></i> Cole Robertson
-                  </span>
-                </div>
-              </div>
-              <div
-                class="single-class-item set-bg"
-                style={{ "background-image": "url(/classes-6.jpg)" }}
-              >
-                <div class="si-text">
-                  <h4>Weight Loss</h4>
-                  <span>
-                    <i class="fa fa-user"></i> Ryan Scott
-                  </span>
-                </div>
-              </div>
-            </div> */}
+
             <div class="col-lg-4">
               <div
                 class="single-class-item set-bg"
-                // data-setbg="img/classes/classes-7.jpg"
                 style={{ "background-image": "url(/classes-7.jpg)" }}
               >
                 <div class="si-text">
@@ -283,7 +186,6 @@ const HeroSection = () => {
               </div>
               <div
                 class="single-class-item set-bg"
-                // data-setbg="img/classes/classes-8.jpg"
                 style={{ "background-image": "url(/classes-8.jpg)" }}
               >
                 <div class="si-text">
@@ -297,9 +199,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      {/* <!-- Classes Section End --> */}
 
-      {/* <!-- Trainer Section Begin --> */}
       <section class="trainer-section spad">
         <div class="container">
           <div class="row">
@@ -398,9 +298,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      {/* <!-- Trainer Section End --> */}
 
-      {/* <!-- Testimonial Section Begin --> */}
       <section class="testimonial-section spad">
         <div class="container">
           <div class="row">
@@ -452,9 +350,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      {/* <!-- Testimonial/ Section End --> */}
 
-      {/* <!-- Banner Section Begin --> */}
       <section
         class="banner-section set-bg"
         data-setbg="img/banner-bg.jpg"
@@ -475,9 +371,7 @@ const HeroSection = () => {
                   every step of transforming your body from nutrition to
                   exercise all the way down to your molecular structure.
                 </p>
-                {/* <a href="#" class="primary-btn banner-btn">
-                  Contact Now
-                </a> */}
+
                 <button
                   type="submit"
                   class="primary-btn banner-btn"
@@ -493,9 +387,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      {/* <!-- Banner Section End --> */}
 
-      {/* <!-- Membership Section Begin --> */}
       <section class="membership-section spad">
         <div class="container">
           <div class="row">
@@ -531,13 +423,6 @@ const HeroSection = () => {
                     <span>1/Day</span>
                   </li>
                 </ul>
-                {/* <button
-                  type="submit"
-                  class="primary-btn membership-btn"
-                  onClick={joinNowScroll}
-                >
-                  START NOW
-                </button> */}
               </div>
             </div>
             <div class="col-lg-4">
@@ -565,13 +450,6 @@ const HeroSection = () => {
                     <span>2/Day</span>
                   </li>
                 </ul>
-                {/* <button
-                  type="submit"
-                  class="primary-btn membership-btn"
-                  onClick={joinNowScroll}
-                >
-                  START NOW
-                </button> */}
               </div>
             </div>
             <div class="col-lg-4">
@@ -599,25 +477,14 @@ const HeroSection = () => {
                     <span>Unlimited</span>
                   </li>
                 </ul>
-                {/* <button
-                  type="submit"
-                  class="primary-btn membership-btn"
-                  onClick={joinNowScroll}
-                >
-                  START NOW
-                </button> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* <!-- Membership Section End --> */}
 
-      {/* <!-- Register Section Begin --> */}
       <NewREgistrationsSection />
-      {/* <!-- Register Section End --> */}
 
-      {/* <!-- Latest Blog Section Begin --> */}
       <section class="latest-blog-section spad">
         <div class="container">
           <div class="row">
@@ -673,16 +540,13 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      {/* <!-- Latest Blog Section End --> */}
 
-      {/* <!-- Footer Banner Section Begin --> */}
       <section class="footer-banner">
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-6">
               <div
                 class="footer-banner-item set-bg"
-                // data-setbg="img/footer-banner/footer-banner-1.jpg"
                 style={{
                   "background-image": "url(/footer-banner/footer-banner-1.jpg)",
                 }}
@@ -693,15 +557,11 @@ const HeroSection = () => {
                   Complete the training sessions with us, surely you will be
                   happy
                 </p>
-                {/* <a href="#" class="primary-btn">
-                  Get Started
-                </a> */}
               </div>
             </div>
             <div class="col-lg-6">
               <div
                 class="footer-banner-item set-bg"
-                // data-setbg="img/footer-banner/footer-banner-2.jpg"
                 style={{
                   "background-image": "url(/footer-banner/footer-banner-2.jpg)",
                 }}
@@ -709,19 +569,11 @@ const HeroSection = () => {
                 <span>contact us</span>
                 <h2>09 746 204</h2>
                 <p>We would love to hear from you.</p>
-                {/* <a href="#" class="primary-btn">
-                  Get Started
-                </a> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* <!-- Footer Banner Section End --> */}
-
-      {/* <!-- Footer Section Begin --> */}
-      {/* <Footer /> */}
-      {/* <!-- Footer Section End --> */}
     </div>
   );
 };

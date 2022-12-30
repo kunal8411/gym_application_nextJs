@@ -7,7 +7,7 @@ function UsersTable(props) {
       <div className="card ">
         <div className="card-header pb-0 p-3">
           <div className="d-flex justify-content-between">
-            <h6 className="mb-2">Clients registration ending this week</h6>
+            <h6 className="mb-2">{props?.title}</h6>
           </div>
         </div>
         <div className="table-responsive p-0">
@@ -77,18 +77,8 @@ function UsersTable(props) {
                           {moment(data.endDate).format("YYYY-MM-DD")}
                         </span>
                       </td>
-                      {/* <td className="align-middle">
-                        <a
-                          href="javascript:;"
-                          className="text-secondary font-weight-bold text-xs"
-                          data-toggle="tooltip"
-                          data-original-title="Edit user"
-                        >
-                          Edit
-                        </a>
-                      </td> */}
+                      
                     </tr>
-                //   </div>
                 );
               })}
             </tbody>

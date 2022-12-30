@@ -1,10 +1,8 @@
 import React from "react";
-import NewREgistrationsSection from "../../components/newREgistrationsSection";
 
 function index() {
   return (
     <div>
-      {/* <!-- Breadcrumb Section Begin --> */}
       <section
         class="breadcrumb-section set-bg"
         data-setbg="img/breadcrumb/classes-breadcrumb.jpg"
@@ -17,24 +15,12 @@ function index() {
             <div class="col-lg-12">
               <div class="breadcrumb-text">
                 <h2>CLASSES</h2>
-                {/* <div class="breadcrumb-option">
-                  <Link href="./index.html">
-                    <i class="fa fa-home"></i> 
-                  </Link>
-                  <span>About Us</span>
-                </div> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* <!-- Breadcrumb Section End --> */}
 
-      {/* <!-- Register Section Begin --> */}
-      {/* <NewREgistrationsSection/> */}
-      {/* <!-- Register Section End --> */}
-
-      {/* <!-- Classes Section Begin --> */}
       <section class="classes-section classes-page spad">
         <div class="container">
           <div class="row">
@@ -174,9 +160,7 @@ function index() {
           </div>
         </div>
       </section>
-      {/* <!-- Classes Section End --> */}
 
-      {/* <!-- Classes Timetable Section Begin --> */}
       <section class="classes-timetable spad">
         <div class="container">
           <div class="row">
@@ -348,9 +332,7 @@ function index() {
           </div>
         </div>
       </section>
-      {/* <!-- Trainer Table Schedule Section End --> */}
 
-      {/* <!-- Footer Banner Section Begin --> */}
       <section class="footer-banner">
         <div class="container-fluid">
           <div class="row">
@@ -368,9 +350,6 @@ function index() {
                   Complete the training sessions with us, surely you will be
                   happy
                 </p>
-                {/* <a href="#" class="primary-btn">
-                  Get Started
-                </a> */}
               </div>
             </div>
             <div class="col-lg-6">
@@ -384,15 +363,11 @@ function index() {
                 <span>contact us</span>
                 <h2>09 746 204</h2>
                 <p>We would love to hear from you.</p>
-                {/* <a href="#" class="primary-btn">
-                  Get Started
-                </a> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* <!-- Footer Banner Section End --> */}
     </div>
   );
 }

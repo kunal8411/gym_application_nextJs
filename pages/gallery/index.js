@@ -3,12 +3,7 @@ import React from "react";
 function index() {
   return (
     <div>
-      {/* <!-- Page Preloder --> */}
-      {/* <div id="preloder">
-        <div class="loader"></div>
-      </div> */}
-
-      {/* <!-- Breadcrumb Section Begin --> */}
+      
       <section
         class="breadcrumb-section set-bg"
         data-setbg="/breadcrumb/classes-breadcrumb.jpg"
@@ -21,20 +16,13 @@ function index() {
             <div class="col-lg-12">
               <div class="breadcrumb-text">
                 <h2>Gallery</h2>
-                {/* <div class="breadcrumb-option">
-                  <a href="./index.html">
-                    <i class="fa fa-home"></i> Home
-                  </a>
-                  <span>Gallery</span>
-                </div> */}
+                
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* <!-- Breadcrumb Section End --> */}
 
-      {/* <!-- Gallery Section Begin --> */}
       <div class="gallery-section spad">
         <div class="container">
           <div class="row">
@@ -87,7 +75,6 @@ function index() {
           </div>
         </div>
       </div>
-      {/* <!-- Gallery Section End --> */}
     </div>
   );
 }

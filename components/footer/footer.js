@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-import classes from "./footer.module.css";
 function Footer() {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -93,9 +92,6 @@ function Footer() {
             onSubmit={handleSubmit}
             noValidate
           >
-            {/* <input type="text" placeholder="Enter Your Mail" /> */}
-
-            {/* <label htmlFor="emailList">Last Name*</label> */}
             <input
               type="text"
               id="emailList"
@@ -122,24 +118,31 @@ function Footer() {
               <a href="#">Privacy Policy</a>
             </li>
           </ul>
-          {/* <p>&copy;<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
           All rights reserved | This template is made with{" "}
           <i class="fa fa-heart" aria-hidden="true"></i> by{" "}
           <a href="https://colorlib.com">Our Team</a>
-          {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></p> */}
           <div class="footer-social">
-            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i class="fa fa-facebook"></i>
             </a>
-            <a href="https://twitter.com/login" target="_blank" rel="noreferrer">
+            <a
+              href="https://twitter.com/login"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i class="fa fa-twitter"></i>
             </a>
-            <a href="https://www.instagram.com/web_developer_freelancer__/saved/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.instagram.com/web_developer_freelancer__/saved/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i class="fa fa-instagram"></i>
             </a>
-            {/* <a href="https://www.instagram.com/web_developer_freelancer__/saved/" target="_blank" rel="noreferrer">
-              <i class="fa fa-dribbble"></i>
-            </a> */}
           </div>
         </div>
       </div>

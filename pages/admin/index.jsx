@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Pie } from "react-chartjs-2";
-import axios from "axios";
 import UsersTable from "../../components/usersListTable/UsersTable";
-import { toast } from "react-toastify";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 import Link from "next/link";
 function Index(props) {
   const router = useRouter();
 
-  //state variables
   const [isAlreadyLoggedIn, setLoggedInState] = useState(false);
 
   useEffect(() => {
@@ -23,22 +19,13 @@ function Index(props) {
         router.push("/contact");
       }
     }
-    // if (!isAlreadyLoggedIn) {
-    //   router.push("/login");
-    // }
   }, []);
-
-  console.log(
-    "isAlreadyLoggedInisAlreadyLoggedInisAlreadyLoggedInisAlreadyLoggedIn",
-    isAlreadyLoggedIn
-  );
 
   return (
     <div className="g-sidenav-show   bg-gray-100">
       <div className="min-height-300 bg-primary position-absolute w-100"></div>
 
       <main className="main-content position-relative border-radius-lg ">
-        {/* <!-- Navbar --> */}
         <nav
           className="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl "
           id="navbarBlur"
@@ -65,9 +52,7 @@ function Index(props) {
             </nav>
           </div>
         </nav>
-        {/* <!-- End Navbar --> */}
 
-        {/* box */}
         <div className="container-fluid py-4">
           <div className="row">
             <div className="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -200,64 +185,15 @@ function Index(props) {
 
           <div className="row mt-4">
             <UsersTable
+              title={"Clients registration ending this week"}
               userData={props.weeklyUsersData.usersRegistrationsEndingThisWeek}
             />
-            <UsersTable userData={props.usersData.allUsers} />
+
+            <UsersTable
+              userData={props.usersData.allUsers}
+              title={"All Clients"}
+            />
           </div>
-          {/* <footer className="footer pt-3  ">
-            <div className="container-fluid">
-              <div className="row align-items-center justify-content-lg-between">
-                <div className="col-lg-6 mb-lg-0 mb-4">
-                  <div className="copyright text-center text-sm text-muted text-lg-start">
-                    ©, made with <i className="fa fa-heart"></i> by
-                    <a
-                      href="https://www.creative-tim.com"
-                      className="font-weight-bold"
-                    >
-                      Creative Tim
-                    </a>
-                    for a better web.
-                  </div>
-                </div>
-                <div className="col-lg-6">
-                  <ul className="nav nav-footer justify-content-center justify-content-lg-end">
-                    <li className="nav-item">
-                      <a
-                        href="https://www.creative-tim.com"
-                        className="nav-link text-muted"
-                      >
-                        Creative Tim
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        href="https://www.creative-tim.com/presentation"
-                        className="nav-link text-muted"
-                      >
-                        About Us
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        href="https://www.creative-tim.com/blog"
-                        className="nav-link text-muted"
-                      >
-                        Blog
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        href="https://www.creative-tim.com/license"
-                        className="nav-link pe-0 text-muted"
-                      >
-                        License
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </footer> */}
         </div>
       </main>
     </div>
