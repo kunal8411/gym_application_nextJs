@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const { MongoClient } = require("mongodb");
 import dbConnect from "../../../utils/dbConnect";
-import Contact from "../../models/Contact";
+import Contact from "../../../models/Contact";
 
 export default async function handler(req, res) {
   const { method } = req;
