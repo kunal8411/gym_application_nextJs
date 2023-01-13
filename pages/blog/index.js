@@ -34,7 +34,7 @@ function index() {
                   </a>
                 </div>
                 <h4>
-                  <a href="./blog-details.html">
+                  <a href="./blog">
                     10 States At Risk of Rural Hospital Closures
                   </a>
                 </h4>
@@ -50,7 +50,7 @@ function index() {
                   </a>
                 </div>
                 <h4>
-                  <a href="./blog-details.html">
+                  <a href="./blog">
                     Diver who helped save Thai soccer team
                   </a>
                 </h4>
@@ -66,7 +66,7 @@ function index() {
                   </a>
                 </div>
                 <h4>
-                  <a href="./blog-details.html">
+                  <a href="./blog">
                     Man gets life in prison for stabbing
                   </a>
                 </h4>
@@ -82,7 +82,7 @@ function index() {
                   </a>
                 </div>
                 <h4>
-                  <a href="./blog-details.html">
+                  <a href="./blog">
                     Indias first male synchronised swimmer
                   </a>
                 </h4>
@@ -98,7 +98,7 @@ function index() {
                   </a>
                 </div>
                 <h4>
-                  <a href="./blog-details.html">
+                  <a href="./blog">
                     NYC measles vaccination order prevails in court
                   </a>
                 </h4>
@@ -114,7 +114,7 @@ function index() {
                   </a>
                 </div>
                 <h4>
-                  <a href="./blog-details.html">
+                  <a href="./blog">
                     The Week in Pictures: April 11 - 18
                   </a>
                 </h4>
@@ -130,7 +130,7 @@ function index() {
                   </a>
                 </div>
                 <h4>
-                  <a href="./blog-details.html">
+                  <a href="./blog">
                     Man who pretended to be faces new charges
                   </a>
                 </h4>
@@ -146,7 +146,7 @@ function index() {
                   </a>
                 </div>
                 <h4>
-                  <a href="./blog-details.html">
+                  <a href="./blog">
                     10 States At Risk of Rural Hospital Closures
                   </a>
                 </h4>
@@ -162,7 +162,7 @@ function index() {
                   </a>
                 </div>
                 <h4>
-                  <a href="./blog-details.html">
+                  <a href="./blog">
                     Lenny Kravitz gives Arch Digest a look inside
                   </a>
                 </h4>

@@ -31,10 +31,10 @@ function index() {
                 <li class="active" data-filter=".all">
                   all gallery
                 </li>
-                <li data-filter=".fitness">fitness</li>
+                {/* <li data-filter=".fitness">fitness</li>
                 <li data-filter=".coaching">coaching</li>
                 <li data-filter=".event">event</li>
-                <li data-filter=".other">other</li>
+                <li data-filter=".other">other</li> */}
               </ul>
             </div>
           </div>

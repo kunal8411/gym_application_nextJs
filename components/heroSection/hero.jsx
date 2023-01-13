@@ -42,10 +42,10 @@ const HeroSection = () => {
                   <h3 style={{ color: "lightblue" }}>FITNESS ELEMENTS</h3>
                 </span>
                 <span>
-                  <h1 style={{ color: "cyan" }}>ABSOLUTE FITNESS</h1>
+                  <h1 style={{ color: "gold" }}>ABSOLUTE FITNESS</h1>
                 </span>
                 <p>
-                  <span className="fs-2 fw-bold text-success"> BUILD</span>
+                  <span className="fs-2 fw-bold text-info"> BUILD</span>
                   <span className="fs-1 text">YOUR BODY</span>
                   <br /> <span className="fs-2 text text-info">
                     TRANSFORM

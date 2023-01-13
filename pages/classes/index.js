@@ -173,11 +173,11 @@ function index() {
                   <li class="active" data-tsfilter="all">
                     All Class
                   </li>
-                  <li data-tsfilter="gym">Gym</li>
+                  {/* <li data-tsfilter="gym">Gym</li>
                   <li data-tsfilter="crossfit">Crossfit</li>
                   <li data-tsfilter="cardio">Cardio</li>
                   <li data-tsfilter="body">Body</li>
-                  <li data-tsfilter="yoga">Yoga</li>
+                  <li data-tsfilter="yoga">Yoga</li> */}
                 </ul>
               </div>
             </div>

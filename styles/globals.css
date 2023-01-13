@@ -25155,7 +25155,6 @@ hr.horizontal.gray-light {
 }
 
 .navbar-toggler .navbar-toggler-icon {
-  background-image: none;
 }
 
 .navbar-toggler .navbar-toggler-icon .navbar-toggler-bar {
@@ -30111,5 +30110,30 @@ input.error {
   display: relative;
   margin-bottom: -10px;
 }
+.margin-left-for-each-list li{
+  margin-left: 7px;
+  font-size: 20px;
+  margin: 3px;
+}
+.link-header {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px 0;
+  position: relative;
+  cursor: pointer;
+}
 
+a, u, link{
+  text-decoration: none !important;
+}
+
+.margin-left-for-each-list li div a {
+   padding:5px !important;
+   color: white !important;
+ }
+
+ .margin-left-for-each-list li a {
+   padding:5px !important;
+   color: white !important;
+ }
 /*# sourceMappingURL=dashboard-free.css.map */
