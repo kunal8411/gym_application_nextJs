@@ -57,7 +57,7 @@ const Header = () => {
       <div className="container">
         <div className="logo" style={{ marginTop: "10px" }}>
           <Link href="/">
-            <img src="/logo.png" alt="" />
+            <img src="/gym-logo2.png" alt="" style={{"width":"4rem", height:"2rem"}}/>
           </Link>
         </div>
         <div className="nav-menu">
