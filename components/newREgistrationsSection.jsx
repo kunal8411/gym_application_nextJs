@@ -135,7 +135,7 @@ export default class NewREgistrationsSection extends Component {
                 >
                   <div class="row">
                     <div class="col-lg-6">
-                      <label for="name" htmlFor="firstName">
+                      <label htmlFor="firstName">
                         First Name*
                       </label>
                       <input
@@ -152,7 +152,7 @@ export default class NewREgistrationsSection extends Component {
                     </div>
 
                     <div class="col-lg-6">
-                      <label for="last-name" htmlFor="lastName">
+                      <label htmlFor="lastName">
                         Last Name*
                       </label>
                       <input
@@ -168,7 +168,7 @@ export default class NewREgistrationsSection extends Component {
                       )}
                     </div>
                     <div class="col-lg-6">
-                      <label for="email">Your email address*</label>
+                      <label >Your email address*</label>
                       <input
                         type="text"
                         id="email"
@@ -182,7 +182,7 @@ export default class NewREgistrationsSection extends Component {
                       )}
                     </div>
                     <div class="col-lg-6">
-                      <label for="mobile">Mobile No*</label>
+                      <label>Mobile No*</label>
                       <input
                         type="number"
                         id="mobile"

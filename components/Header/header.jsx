@@ -1,223 +1,94 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useState } from "react";
-import { useEffect } from "react";
 import { useRouter } from "next/router";
+
 const Header = () => {
   const router = useRouter();
-  const [headerIndex, setheaderIndex] = useState(0);
-  const [currnetLoggedInUser, setCurrentLoggedInUser] = useState({});
+  const [headerIndex, setHeaderIndex] = useState(0);
+  const [currentLoggedInUser, setCurrentLoggedInUser] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+
   const setHeaderIndexInLocalStorage = (index) => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("headerTileIndex", index);
-    }
-    setheaderIndex(index);
+    localStorage.setItem("headerTileIndex", index);
+    setHeaderIndex(index);
   };
-  const redirectToLoginPage = async () => {
-    await router.push("/login");
+
+  const redirectToLoginPage = () => router.push("/login");
+
+  const removeUserFromLS = () => {
+    localStorage.removeItem("currentLoggedInUser");
+    setCurrentLoggedInUser(null);
+    router.push("/");
+    setIsOpen(false);
   };
-  const removeUserFromLS = async () => {
-    if (typeof window !== "undefined") {
-      localStorage.removeItem("currentLoggedInUser");
-      setCurrentLoggedInUser({});
-      await router.push("/");
-      setIsOpen(false);
-    }
+
+  const redirectToOtherPage = (route, index) => {
+    router.push(route);
+    setHeaderIndexInLocalStorage(index);
+    setIsOpen(false);
   };
-  const handleLinkClick = () => {
-    setIsOpen(!isOpen);
-  };
-  const redirectToOtherPage = async (route) => {
-    await router.push(route);
-    await setIsOpen(false);
-  };
+
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+
   useEffect(() => {
-    async function init() {
-      if (typeof window !== "undefined") {
-        const headerIndex = localStorage.getItem("headerTileIndex");
-        setheaderIndex(parseInt(headerIndex));
-        if (
-          currnetLoggedInUser !== undefined &&
-          currnetLoggedInUser !== null &&
-          Object.keys(currnetLoggedInUser).length === 0
-        ) {
-          const currentLoggedInUser = localStorage.getItem(
-            "currentLoggedInUser"
-          );
-          setCurrentLoggedInUser(JSON.parse(currentLoggedInUser));
-        }
-      }
-    }
-    init();
-  });
+    const headerTileIndex = localStorage.getItem("headerTileIndex");
+    const loggedInUser = localStorage.getItem("currentLoggedInUser");
+    if (headerTileIndex) setHeaderIndex(parseInt(headerTileIndex));
+    if (loggedInUser) setCurrentLoggedInUser(JSON.parse(loggedInUser));
+  }, []);
 
   return (
-    <header className="header-section">
-      <div className="container">
-        <div className="logo" style={{ marginTop: "10px" }}>
-          <Link href="/">
-            <img src="/gym-logo2.png" alt="" style={{"width":"4rem", height:"2rem"}}/>
-          </Link>
-        </div>
-        <div className="nav-menu">
-          <nav
-            class="navbar navbar-expand-lg "
-            // style={{ "background-image": "url(/hero-bg.jpg)" }}
-          >
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                {/* Navbar  */}
-              </a>
-              <button
-                // class="navbar-toggler"
-                className={
-                  isOpen ? "navbar-toggler collapseddddd" : "navbar-toggler"
-                }
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                // aria-expanded="false"
-                aria-expanded={isOpen}
-                aria-label="Toggle navigation"
-                onClick={handleLinkClick}
+    <header className="shadow-md header-section">
+      <div className="container flex items-center justify-between px-6 py-2 mx-auto">
+        <Link href="/" className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2">
+            <img src="/gym-logo2.png" alt="Gym Logo" className="w-16 h-8 cursor-pointer" />
+            <span className="text-xl font-bold text-white">Pulse Fit</span>
+          </div>
+        </Link>
+        <button
+          className="text-gray-800 lg:hidden focus:outline-none"
+          onClick={toggleMenu}
+          aria-expanded={isOpen}
+          aria-label="Toggle navigation"
+        >
+          <span className="text-2xl">&#9776;</span>
+        </button>
+        <nav
+          className={`${
+            isOpen ? "block" : "hidden"
+          } lg:flex flex-col lg:flex-row lg:space-x-8 items-center`}
+        >
+          <ul className="flex flex-col space-y-4 text-lg font-medium text-gray-700 lg:flex-row lg:space-y-0 lg:space-x-6">
+            {["Home", "About", "Classes", "Blog", "Gallery", "Contacts"].map((item, index) => (
+              <li
+                key={index}
+                className={`nav-item cursor-pointer ${
+                  headerIndex === index
+                    ? "text-blue-600 border-b-2 border-blue-600"
+                    : "hover:text-blue-500"
+                }`}
+                onClick={() => redirectToOtherPage(`/${item.toLowerCase()}`, index)}
               >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div
-                class="collapse navbar-collapse "
-                className={
-                  isOpen
-                    ? "navbar-collapse collapse show"
-                    : "navbar-collapse collapse"
-                }
-                id="navbarSupportedContent"
-              >
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 margin-left-for-each-list">
-                  <li
-                    className={
-                      headerIndex === 0 ? "active nav-item" : "nav-item"
-                    }
-                  >
-                    <div onClick={() => setHeaderIndexInLocalStorage(0)}>
-                      <a className="link-header" onClick={() => redirectToOtherPage("/")}>
-                        Home
-                      </a>
-                    </div>
-                  </li>
-
-                  <li
-                    className={
-                      headerIndex === 1 ? "active nav-item" : " nav-item"
-                    }
-                  >
-                    <div onClick={() => setHeaderIndexInLocalStorage(1)}>
-                      <a
-                        className=" link-header"
-                        onClick={() => redirectToOtherPage("/about")}
-                      >
-                        About
-                      </a>
-                    </div>
-                  </li>
-
-                  {/* //start  */}
-
-                  <li
-                    className={
-                      headerIndex === 2 ? "active nav-item" : " nav-item"
-                    }
-                  >
-                    <div onClick={() => setHeaderIndexInLocalStorage(2)}>
-                      <a
-                        className="link-header"
-                        onClick={() => redirectToOtherPage("/classes")}
-                      >
-                        Classes
-                      </a>
-                    </div>
-                  </li>
-                  <li
-                    className={
-                      headerIndex === 3 ? "active nav-item" : "nav-item"
-                    }
-                  >
-                    <div onClick={() => setHeaderIndexInLocalStorage(3)}>
-                      <a
-                        className=" link-header"
-                        onClick={() => redirectToOtherPage("/blog")}
-                      >
-                        Blog
-                      </a>
-                    </div>
-                  </li>
-                  <li
-                    className={
-                      headerIndex === 4 ? "active nav-item" : " nav-item"
-                    }
-                  >
-                    <div onClick={() => setHeaderIndexInLocalStorage(4)}>
-                      <a
-                        className="link-header"
-                        onClick={() => redirectToOtherPage("/gallery")}
-                      >
-                        Gallery
-                      </a>
-                    </div>
-                  </li>
-                  <li
-                    className={
-                      headerIndex === 5 ? "active nav-item" : " nav-item"
-                    }
-                  >
-                    <div onClick={() => setHeaderIndexInLocalStorage(5)}>
-                      <a
-                        className="link-header"
-                        onClick={() => redirectToOtherPage("/contact")}
-                      >
-                        Contacts
-                      </a>
-                    </div>
-                  </li>
-
-                  <li className="nav-item">
-                    {currnetLoggedInUser !== undefined &&
-                    currnetLoggedInUser !== null &&
-                    Object.keys(currnetLoggedInUser).length > 0 ? (
-                      <a className="cursor-pointer" onClick={removeUserFromLS}>
-                        Logout
-                      </a>
-                    ) : (
-                      <a
-                        className=" cursor-pointer"
-                        onClick={redirectToLoginPage}
-                      >
-                        Admin Login
-                      </a>
-                    )}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-        <div id="mobile-menu-wrap"></div>
+                {item}
+              </li>
+            ))}
+            <li className="cursor-pointer nav-item">
+              {currentLoggedInUser ? (
+                <span onClick={removeUserFromLS} className="hover:text-blue-500">
+                  Logout
+                </span>
+              ) : (
+                <span onClick={redirectToLoginPage} className="hover:text-blue-500">
+                  Admin Login
+                </span>
+              )}
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );
 };
-export default Header;
 
-{
-  /* <li class="nav-item">
-                    <a class="nav-link active" href="#">
-                      Home
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      Link
-                    </a>
-                  </li> */
-}
+export default Header;
