@@ -116,12 +116,12 @@ export default class NewREgistrationsSection extends Component {
     const { errors } = this.state;
     const { firstName, lastName, email, phoneNumber } = this.state;
     return (
-      <section class="register-section spad" id="register_section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="register-text">
-                <div class="section-title">
+      <section className="register-section spad" id="register_section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="register-text">
+                <div className="section-title">
                   <h2>Register Now</h2>
                   <p>
                     The First 7 Day Trial Is Completely Free With The Trainer
@@ -129,12 +129,12 @@ export default class NewREgistrationsSection extends Component {
                 </div>
                 <form
                   action="#"
-                  class="register-form"
+                  className="register-form"
                   onSubmit={this.handleSubmit}
                   noValidate
                 >
-                  <div class="row">
-                    <div class="col-lg-6">
+                  <div className="row">
+                    <div className="col-lg-6">
                       <label htmlFor="firstName">
                         First Name*
                       </label>
@@ -151,7 +151,7 @@ export default class NewREgistrationsSection extends Component {
                       )}
                     </div>
 
-                    <div class="col-lg-6">
+                    <div className="col-lg-6">
                       <label htmlFor="lastName">
                         Last Name*
                       </label>
@@ -167,7 +167,7 @@ export default class NewREgistrationsSection extends Component {
                         <span className="error">{errors.lastName}</span>
                       )}
                     </div>
-                    <div class="col-lg-6">
+                    <div className="col-lg-6">
                       <label >Your email address*</label>
                       <input
                         type="text"
@@ -181,7 +181,7 @@ export default class NewREgistrationsSection extends Component {
                         <span className="error">{errors.email}</span>
                       )}
                     </div>
-                    <div class="col-lg-6">
+                    <div className="col-lg-6">
                       <label>Mobile No*</label>
                       <input
                         type="number"
@@ -196,14 +196,14 @@ export default class NewREgistrationsSection extends Component {
                       )}
                     </div>
                   </div>
-                  <button type="submit" class="register-btn">
+                  <button type="submit" className="register-btn">
                     Get Started
                   </button>
                 </form>
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="register-pic">
+            <div className="col-lg-4">
+              <div className="register-pic">
                 <img src="/register-pic.jpg" alt="" />
               </div>
             </div>

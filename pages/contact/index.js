@@ -98,16 +98,16 @@ function Index() {
   return (
     <div>
       <section
-        class="breadcrumb-section set-bg"
+        className="breadcrumb-section set-bg"
         data-setbg="/breadcrumb/classes-breadcrumb.jpg"
         style={{
           "background-image": "url(/breadcrumb/classes-breadcrumb.jpg)",
         }}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="breadcrumb-text">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="breadcrumb-text">
                 <h2>Contact US</h2>
               </div>
             </div>
@@ -115,36 +115,36 @@ function Index() {
         </div>
       </section>
 
-      <section class="contact-section spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="contact-info">
+      <section className="contact-section spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4">
+              <div className="contact-info">
                 <h4>Contacts Us</h4>
-                <div class="contact-address">
-                  <div class="ca-widget">
-                    <div class="cw-icon">
+                <div className="contact-address">
+                  <div className="ca-widget">
+                    <div className="cw-icon">
                       <img src="/icon/icon-1.png" alt="" />
                     </div>
-                    <div class="cw-text">
+                    <div className="cw-text">
                       <h5>Our Location</h5>
                       <p>72 Kangnam, 45 Opal Point Suite 391</p>
                     </div>
                   </div>
-                  <div class="ca-widget">
-                    <div class="cw-icon">
+                  <div className="ca-widget">
+                    <div className="cw-icon">
                       <img src="/icon/icon-2.png" alt="" />
                     </div>
-                    <div class="cw-text">
+                    <div className="cw-text">
                       <h5>Phone:</h5>
                       <p>+65 11188888</p>
                     </div>
                   </div>
-                  <div class="ca-widget">
-                    <div class="cw-icon">
+                  <div className="ca-widget">
+                    <div className="cw-icon">
                       <img src="/icon/icon-3.png" alt="" />
                     </div>
-                    <div class="cw-text">
+                    <div className="cw-text">
                       <h5>Mail</h5>
                       <p>absolutefitness@gmail.com</p>
                     </div>
@@ -152,12 +152,12 @@ function Index() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-8">
-              <div class="contact-form">
+            <div className="col-lg-8">
+              <div className="contact-form">
                 <h4>Leave A Comment</h4>
                 <form action="#" onSubmit={handleSubmit} noValidate>
-                  <div class="row">
-                    <div class="col-lg-6">
+                  <div className="row">
+                    <div className="col-lg-6">
                       <input
                         type="text"
                         placeholder="Your name"
@@ -170,7 +170,7 @@ function Index() {
                         <span className="error">{errors.name}</span>
                       )}
                     </div>
-                    <div class="col-lg-6">
+                    <div className="col-lg-6">
                       <input
                         type="text"
                         placeholder="Your email"
@@ -183,7 +183,7 @@ function Index() {
                         <span className="error">{errors.email}</span>
                       )}
                     </div>
-                    <div class="col-lg-12">
+                    <div className="col-lg-12">
                       <textarea
                         // type="text"
                         placeholder="Your messages"
@@ -196,7 +196,7 @@ function Index() {
                         <span className="error">{errors.message}</span>
                       )}
                     </div>
-                    <button className="col-lg-4 mx-auto" type="submit">
+                    <button className="mx-auto col-lg-4" type="submit">
                       Send Message
                     </button>
                   </div>
@@ -207,7 +207,7 @@ function Index() {
         </div>
       </section>
 
-      <div class="map">
+      <div className="map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24112.92132811736!2d-74.20651812810036!3d40.93514309648714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2fda38587e887%3A0xf03207815e338a0d!2sHaledon%2C%20NJ%2007508%2C%20USA!5e0!3m2!1sen!2sbd!4v1578120776078!5m2!1sen!2sbd"
           height="612"

@@ -7,16 +7,16 @@ const Index = () => {
   return (
     <div>
       <section
-        class="breadcrumb-section set-bg"
+        className="breadcrumb-section set-bg"
         data-setbg="img/breadcrumb/classes-breadcrumb.jpg"
         style={{
           "background-image": "url(/breadcrumb/classes-breadcrumb.jpg)",
         }}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="breadcrumb-text">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="breadcrumb-text">
                 <h2>About Us</h2>
               </div>
             </div>
@@ -24,15 +24,15 @@ const Index = () => {
         </div>
       </section>
 
-      <section class="about-section about-page spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="about-pic">
+      <section className="about-section about-page spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="about-pic">
                 <img src="/about-pic.jpg" alt="" />
                 <a
                   href="https://www.youtube.com/watch?v=xMIKdpgxGQ4&feature=youtu.be"
-                  class="play-btn video-popup"
+                  className="play-btn video-popup"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -40,12 +40,12 @@ const Index = () => {
                 </a>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="about-text">
+            <div className="col-lg-6">
+              <div className="about-text">
                 <h2>
                   WHATEVER YOUR GOALS <span>WE ARE HERE TO HELP</span>
                 </h2>
-                <p class="first-para">
+                <p className="first-para">
                   <span>
                     Absolute Fitness provides a 24/7 Fitness facility to help
                     people reach and maintain their goals. Our Staff, Trainers &
@@ -53,7 +53,7 @@ const Index = () => {
                     members a great fitness experience
                   </span>
                 </p>
-                <p class="second-para">
+                <p className="second-para">
                   At Absolute Fitness you’ll find all the latest strength and
                   cardio equipment along with a energetic group exercise program
                   that includes POUND, Zumba, Kickboxing, Bootcamp, Muscle
@@ -67,26 +67,26 @@ const Index = () => {
         </div>
       </section>
 
-      <div class="about-counter">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="about-counter-text">
-                <div class="single-counter">
-                  <h1 class="counter-num count">98</h1>
+      <div className="about-counter">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="about-counter-text">
+                <div className="single-counter">
+                  <h1 className="counter-num count">98</h1>
                   <p>Programs</p>
                 </div>
-                <div class="single-counter">
-                  <h1 class="counter-num count">14</h1>
+                <div className="single-counter">
+                  <h1 className="counter-num count">14</h1>
                   <p>Locations</p>
                 </div>
-                <div class="single-counter">
-                  <h1 class="counter-num count">50</h1>
+                <div className="single-counter">
+                  <h1 className="counter-num count">50</h1>
                   <span>k+</span>
                   <p>Members</p>
                 </div>
-                <div class="single-counter">
-                  <h1 class="counter-num count">34</h1>
+                <div className="single-counter">
+                  <h1 className="counter-num count">34</h1>
                   <p>Coaches</p>
                 </div>
               </div>
@@ -95,11 +95,11 @@ const Index = () => {
         </div>
       </div>
 
-      <section class="gym-award spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="award-text">
+      <section className="gym-award spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="award-text">
                 <h2>Best gym award</h2>
                 <p>
                   We are very proud to be voted Gym of the Year 2018 at the
@@ -119,7 +119,7 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div className="col-lg-4">
               <img src="/award.jpg" alt="" />
             </div>
           </div>
@@ -127,14 +127,14 @@ const Index = () => {
       </section>
 
       <section
-        class="banner-section set-bg"
+        className="banner-section set-bg"
         data-setbg="img/banner-bg.jpg"
         style={{ "background-image": "url(/banner-bg.jpg)" }}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="banner-text">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="banner-text">
                 <h2>EVERYBODY IS DIFFERENT. Get training today</h2>
                 <p>
                   Stop waiting to get in shape! I will help you sculpt the body
@@ -144,32 +144,32 @@ const Index = () => {
                   body from nutrition to exercise all the way down to your
                   molecular structure.
                 </p>
-                <a href="#" class="primary-btn banner-btn">
+                <a href="#" className="primary-btn banner-btn">
                   Contact Now
                 </a>
               </div>
             </div>
-            <div class="col-lg-5">
+            <div className="col-lg-5">
               <img src="/banner-person.png" alt="" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="trainer-section about-trainer spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title">
+      <section className="trainer-section about-trainer spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="section-title">
                 <h2>EXPERT TRAINERS</h2>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="single-trainer-item">
+          <div className="row">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-trainer-item">
                 <img src="/trainer/about-trainer-1.jpg" alt="" />
-                <div class="trainer-text">
+                <div className="trainer-text">
                   <h5>Patrick Cortez</h5>
                   <span>Leader</span>
                   <p>
@@ -178,27 +178,27 @@ const Index = () => {
                     has an 8 years experience in the field of nutrition and
                     fitness industry.
                   </p>
-                  <div class="trainer-social">
+                  <div className="trainer-social">
                     <a href="#">
-                      <i class="fa fa-facebook"></i>
+                      <i className="fa fa-facebook"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-instagram"></i>
+                      <i className="fa fa-instagram"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-twitter"></i>
+                      <i className="fa fa-twitter"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-pinterest"></i>
+                      <i className="fa fa-pinterest"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-trainer-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-trainer-item">
                 <img src="/trainer/about-trainer-2.jpg" alt="" />
-                <div class="trainer-text">
+                <div className="trainer-text">
                   <h5>Gregory Powers</h5>
                   <span>Gym coach</span>
                   <p>
@@ -206,27 +206,27 @@ const Index = () => {
                     people who are looking for some help with their health and
                     fitness with the perfect local trainers for them.
                   </p>
-                  <div class="trainer-social">
+                  <div className="trainer-social">
                     <a href="#">
-                      <i class="fa fa-facebook"></i>
+                      <i className="fa fa-facebook"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-instagram"></i>
+                      <i className="fa fa-instagram"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-twitter"></i>
+                      <i className="fa fa-twitter"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-pinterest"></i>
+                      <i className="fa fa-pinterest"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-trainer-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-trainer-item">
                 <img src="/trainer/about-trainer-3.jpg" alt="" />
-                <div class="trainer-text">
+                <div className="trainer-text">
                   <h5>Walter Wagner</h5>
                   <span>Dance trainer</span>
                   <p>
@@ -234,18 +234,18 @@ const Index = () => {
                     is a health and performance specialist with a background in
                     competitive volleyball.
                   </p>
-                  <div class="trainer-social">
+                  <div className="trainer-social">
                     <a href="#">
-                      <i class="fa fa-facebook"></i>
+                      <i className="fa fa-facebook"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-instagram"></i>
+                      <i className="fa fa-instagram"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-twitter"></i>
+                      <i className="fa fa-twitter"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-pinterest"></i>
+                      <i className="fa fa-pinterest"></i>
                     </a>
                   </div>
                 </div>
@@ -255,12 +255,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section class="footer-banner">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-6">
+      <section className="footer-banner">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-6">
               <div
-                class="footer-banner-item set-bg"
+                className="footer-banner-item set-bg"
                 data-setbg="img/footer-banner/footer-banner-1.jpg"
                 style={{
                   "background-image": "url(/footer-banner/footer-banner-1.jpg)",
@@ -274,9 +274,9 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div className="col-lg-6">
               <div
-                class="footer-banner-item set-bg"
+                className="footer-banner-item set-bg"
                 data-setbg="img/footer-banner/footer-banner-2.jpg"
                 style={{
                   "background-image": "url(/footer-banner/footer-banner-2.jpg)",

@@ -5,16 +5,16 @@ function index() {
     <div>
       
       <section
-        class="breadcrumb-section set-bg"
+        className="breadcrumb-section set-bg"
         data-setbg="/breadcrumb/classes-breadcrumb.jpg"
         style={{
           "background-image": "url(/breadcrumb/classes-breadcrumb.jpg)",
         }}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="breadcrumb-text">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="breadcrumb-text">
                 <h2>Gallery</h2>
                 
               </div>
@@ -23,12 +23,12 @@ function index() {
         </div>
       </section>
 
-      <div class="gallery-section spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <ul class="gallery-controls">
-                <li class="active" data-filter=".all">
+      <div className="gallery-section spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <ul className="gallery-controls">
+                <li className="active" data-filter=".all">
                   all gallery
                 </li>
                 {/* <li data-filter=".fitness">fitness</li>
@@ -38,38 +38,38 @@ function index() {
               </ul>
             </div>
           </div>
-          <div class="row gallery-filter">
-            <div class="col-lg-6 mix all fitness">
+          <div className="row gallery-filter">
+            <div className="col-lg-6 mix all fitness">
               <img src="/gallery/gallery-1.jpg" alt="" />
             </div>
-            <div class="col-lg-6">
-              <div class="row">
-                <div class="col-lg-6 mix all fitness coaching">
+            <div className="col-lg-6">
+              <div className="row">
+                <div className="col-lg-6 mix all fitness coaching">
                   <img src="/gallery/gallery-2.jpg" alt="" />
                 </div>
-                <div class="col-lg-6">
-                  <div class="row">
-                    <div class="col-lg-12 mix all coaching">
+                <div className="col-lg-6">
+                  <div className="row">
+                    <div className="col-lg-12 mix all coaching">
                       <img src="/gallery/gallery-3.jpg" alt="" />
                     </div>
-                    <div class="col-lg-12 mix all coaching">
+                    <div className="col-lg-12 mix all coaching">
                       <img src="/gallery/gallery-4.jpg" alt="" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="row">
-                <div class="col-lg-6 mix all other">
+            <div className="col-lg-6">
+              <div className="row">
+                <div className="col-lg-6 mix all other">
                   <img src="/gallery/gallery-5.jpg" alt="" />
                 </div>
-                <div class="col-lg-6 mix all other">
+                <div className="col-lg-6 mix all other">
                   <img src="/gallery/gallery-6.jpg" alt="" />
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 mix all event">
+            <div className="col-lg-6 mix all event">
               <img src="/gallery/gallery-7.jpg" alt="" />
             </div>
           </div>

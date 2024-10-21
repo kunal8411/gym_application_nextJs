@@ -53,42 +53,42 @@ function Footer() {
     }
   };
   return (
-    <footer class="footer-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="contact-option">
+    <footer className="footer-section">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4">
+            <div className="contact-option">
               <span>Phone</span>
               <div>(123) 118 9999 - (123) 118 9999</div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="contact-option">
+          <div className="col-md-4">
+            <div className="contact-option">
               <span>Address</span>
               <p>72 Kangnam, 45 Opal Point Suite 391</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="contact-option">
+          <div className="col-md-4">
+            <div className="contact-option">
               <span>Email</span>
               <p>absolutefitness@gmail.com</p>
             </div>
           </div>
         </div>
         <div
-          class="subscribe-option set-bg"
+          className="subscribe-option set-bg"
           data-setbg="img/footer-signup.jpg"
           style={{
             "background-image": "url(/footer-banner/footer-banner-2.jpg)",
           }}
         >
-          <div class="so-text">
+          <div className="so-text">
             <h4>Subscribe To Our Mailing List</h4>
             <p>Sign up to receive the latest information </p>
           </div>
           <form
             action="#"
-            class="subscribe-form"
+            className="subscribe-form"
             onSubmit={handleSubmit}
             noValidate
           >
@@ -105,11 +105,11 @@ function Footer() {
               <span className="error">{emailError}</span>
             )}
             <button type="submit">
-              <i class="fa fa-send"></i>
+              <i className="fa fa-send"></i>
             </button>
           </form>
         </div>
-        <div class="copyright-text">
+        <div className="copyright-text">
           <ul>
             <li>
               <a href="#">Term&Use</a>
@@ -119,29 +119,29 @@ function Footer() {
             </li>
           </ul>
           All rights reserved | This template is made with{" "}
-          <i class="fa fa-heart" aria-hidden="true"></i> by{" "}
+          <i className="fa fa-heart" aria-hidden="true"></i> by{" "}
           <a href="https://colorlib.com">Our Team</a>
-          <div class="footer-social">
+          <div className="footer-social">
             <a
               href="https://www.facebook.com/"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa fa-facebook"></i>
+              <i className="fa fa-facebook"></i>
             </a>
             <a
               href="https://twitter.com/login"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa fa-twitter"></i>
+              <i className="fa fa-twitter"></i>
             </a>
             <a
               href="https://www.instagram.com/web_developer_freelancer__/saved/"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa fa-instagram"></i>
+              <i className="fa fa-instagram"></i>
             </a>
           </div>
         </div>

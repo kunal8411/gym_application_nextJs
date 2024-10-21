@@ -4,16 +4,16 @@ function index() {
   return (
     <div>
       <section
-        class="breadcrumb-section set-bg"
+        className="breadcrumb-section set-bg"
         data-setbg="img/breadcrumb/classes-breadcrumb.jpg"
         style={{
           "background-image": "url(/breadcrumb/classes-breadcrumb.jpg)",
         }}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="breadcrumb-text">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="breadcrumb-text">
                 <h2>CLASSES</h2>
               </div>
             </div>
@@ -21,138 +21,138 @@ function index() {
         </div>
       </section>
 
-      <section class="classes-section classes-page spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title">
+      <section className="classes-section classes-page spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="section-title">
                 <h2>OUR CLASSES</h2>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
+          <div className="row">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 data-setbg="img/classes/classes-1.jpg"
                 style={{ "background-image": "url(/classes/classes-1.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Yoga</h4>
                   <span>
-                    <i class="fa fa-user"></i> Ryan Knight
+                    <i className="fa fa-user"></i> Ryan Knight
                   </span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 data-setbg="img/classes/classes-4.jpg"
                 style={{ "background-image": "url(/banner-bg.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Karate</h4>
                   <span>
-                    <i class="fa fa-user"></i> Kevin McCormick
+                    <i className="fa fa-user"></i> Kevin McCormick
                   </span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 data-setbg="img/classes/classes-2.jpg"
                 style={{ "background-image": "url(/classes/classes-2.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Running</h4>
                   <span>
-                    <i class="fa fa-user"></i> Randy Rivera
+                    <i className="fa fa-user"></i> Randy Rivera
                   </span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 data-setbg="img/classes/classes-5.jpg"
                 style={{ "background-image": "url(/classes/classes-5.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Dance</h4>
                   <span>
-                    <i class="fa fa-user"></i> Russell Lane
+                    <i className="fa fa-user"></i> Russell Lane
                   </span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 data-setbg="img/classes/classes-3.jpg"
                 style={{ "background-image": "url(/classes/classes-3.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Personal Training</h4>
                   <span>
-                    <i class="fa fa-user"></i> Cole Robertson
+                    <i className="fa fa-user"></i> Cole Robertson
                   </span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 data-setbg="img/classes/classes-6.jpg"
                 style={{ "background-image": "url(/classes/classes-6.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Weight Loss</h4>
                   <span>
-                    <i class="fa fa-user"></i> Ryan Scott
+                    <i className="fa fa-user"></i> Ryan Scott
                   </span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 data-setbg="img/classes/classes-7.jpg"
                 style={{ "background-image": "url(/classes/classes-7.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Box</h4>
                   <span>
-                    <i class="fa fa-user"></i> Chester Bowen
+                    <i className="fa fa-user"></i> Chester Bowen
                   </span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 data-setbg="img/classes/classes-8.jpg"
                 style={{ "background-image": "url(/classes/classes-8.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Cardio</h4>
                   <span>
-                    <i class="fa fa-user"></i> Jorge Fernandez
+                    <i className="fa fa-user"></i> Jorge Fernandez
                   </span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 data-setbg="img/classes/classes-8.jpg"
                 style={{ "background-image": "url(/classes/classes-8.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Crossfit</h4>
                   <span>
-                    <i class="fa fa-user"></i> Chester Bowen
+                    <i className="fa fa-user"></i> Chester Bowen
                   </span>
                 </div>
               </div>
@@ -161,16 +161,16 @@ function index() {
         </div>
       </section>
 
-      <section class="classes-timetable spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title">
+      <section className="classes-timetable spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="section-title">
                 <h2>Class Timetable</h2>
               </div>
-              <div class="nav-controls">
+              <div className="nav-controls">
                 <ul>
-                  <li class="active" data-tsfilter="all">
+                  <li className="active" data-tsfilter="all">
                     All Class
                   </li>
                   {/* <li data-tsfilter="gym">Gym</li>
@@ -182,9 +182,9 @@ function index() {
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="schedule-table">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="schedule-table">
                 <table>
                   <thead>
                     <tr>
@@ -200,129 +200,129 @@ function index() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="workout-time">10.00</td>
-                      <td class="hover-bg ts-item" data-tsmeta="gym">
+                      <td className="workout-time">10.00</td>
+                      <td className="hover-bg ts-item" data-tsmeta="gym">
                         <h6>Gym</h6>
                         <span>10.00 - 11.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
-                      <td class="hover-bg ts-item" data-tsmeta="yoga">
+                      <td className="hover-bg ts-item" data-tsmeta="yoga">
                         <h6>Yoga</h6>
                         <span>10.00 - 12.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
-                      <td class="hover-bg ts-item" data-tsmeta="body">
+                      <td className="hover-bg ts-item" data-tsmeta="body">
                         <h6>Body</h6>
                         <span>10.00 - 12.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
-                      <td class="hover-bg ts-item" data-tsmeta="cardio">
+                      <td className="hover-bg ts-item" data-tsmeta="cardio">
                         <h6>Cardio</h6>
                         <span>10.00 - 11.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                     </tr>
                     <tr>
-                      <td class="workout-time">14.00</td>
+                      <td className="workout-time">14.00</td>
                       <td></td>
-                      <td class="hover-bg ts-item">
+                      <td className="hover-bg ts-item">
                         <h6>Running</h6>
                         <span>14.00 - 16.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
-                      <td class="hover-bg ts-item">
+                      <td className="hover-bg ts-item">
                         <h6>Box</h6>
                         <span>14.00 - 15.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
-                      <td class="hover-bg ts-item" data-tsmeta="gym">
+                      <td className="hover-bg ts-item" data-tsmeta="gym">
                         <h6>Gym</h6>
                         <span>14.00 - 16.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
                     </tr>
                     <tr>
-                      <td class="workout-time">16.00</td>
-                      <td class="hover-bg ts-item" data-tsmeta="cardio">
+                      <td className="workout-time">16.00</td>
+                      <td className="hover-bg ts-item" data-tsmeta="cardio">
                         <h6>Cardio</h6>
                         <span>16.00 - 18.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
-                      <td class="hover-bg ts-item" data-tsmeta="gym">
+                      <td className="hover-bg ts-item" data-tsmeta="gym">
                         <h6>Gym</h6>
                         <span>16.00 - 19.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
-                      <td class="hover-bg ts-item" data-tsmeta="yoga">
+                      <td className="hover-bg ts-item" data-tsmeta="yoga">
                         <h6>Yoga</h6>
                         <span>16.00 - 18.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
-                      <td class="hover-bg ts-item" data-tsmeta="gym">
+                      <td className="hover-bg ts-item" data-tsmeta="gym">
                         <h6>Gym</h6>
                         <span>16.00 - 20.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                     </tr>
                     <tr>
-                      <td class="workout-time">18.00</td>
-                      <td class="hover-bg ts-item">
+                      <td className="workout-time">18.00</td>
+                      <td className="hover-bg ts-item">
                         <h6>Box</h6>
                         <span>18.00 - 22.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
-                      <td class="hover-bg ts-item" data-tsmeta="body">
+                      <td className="hover-bg ts-item" data-tsmeta="body">
                         <h6>Body</h6>
                         <span>18.00 - 20.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
-                      <td class="hover-bg ts-item" data-tsmeta="crossfit">
+                      <td className="hover-bg ts-item" data-tsmeta="crossfit">
                         <h6>Crossfit</h6>
                         <span>18.00 - 21.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
-                      <td class="hover-bg ts-item" data-tsmeta="cardio">
+                      <td className="hover-bg ts-item" data-tsmeta="cardio">
                         <h6>Cardio</h6>
                         <span>18.00 - 22.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
                     </tr>
                     <tr>
-                      <td class="workout-time">20.00</td>
+                      <td className="workout-time">20.00</td>
                       <td></td>
-                      <td class="hover-bg ts-item" data-tsmeta="gym">
+                      <td className="hover-bg ts-item" data-tsmeta="gym">
                         <h6>Gym</h6>
                         <span>20.00 - 12.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
-                      <td class="hover-bg ts-item" data-tsmeta="body">
+                      <td className="hover-bg ts-item" data-tsmeta="body">
                         <h6>Body</h6>
                         <span>20.00 - 21.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
-                      <td class="hover-bg ts-item" data-tsmeta="cardio">
+                      <td className="hover-bg ts-item" data-tsmeta="cardio">
                         <h6>Cardio</h6>
                         <span>20.00 - 22.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                       <td></td>
-                      <td class="hover-bg ts-item" data-tsmeta="crossfit">
+                      <td className="hover-bg ts-item" data-tsmeta="crossfit">
                         <h6>Crossfit</h6>
                         <span>20.00 - 21.00</span>
-                        <div class="trainer-name">John Smith</div>
+                        <div className="trainer-name">John Smith</div>
                       </td>
                     </tr>
                   </tbody>
@@ -333,12 +333,12 @@ function index() {
         </div>
       </section>
 
-      <section class="footer-banner">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-6">
+      <section className="footer-banner">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-6">
               <div
-                class="footer-banner-item set-bg"
+                className="footer-banner-item set-bg"
                 data-setbg="img/footer-banner/footer-banner-1.jpg"
                 style={{
                   "background-image": "url(/footer-banner/footer-banner-1.jpg)",
@@ -352,9 +352,9 @@ function index() {
                 </p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div className="col-lg-6">
               <div
-                class="footer-banner-item set-bg"
+                className="footer-banner-item set-bg"
                 data-setbg="img/footer-banner/footer-banner-2.jpg"
                 style={{
                   "background-image": "url(/footer-banner/footer-banner-2.jpg)",

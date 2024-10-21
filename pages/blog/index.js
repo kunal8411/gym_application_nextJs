@@ -4,16 +4,16 @@ function index() {
   return (
     <div>
       <section
-        class="breadcrumb-section set-bg"
+        className="breadcrumb-section set-bg"
         data-setbg="/breadcrumb/classes-breadcrumb.jpg"
         style={{
           "background-image": "url(/breadcrumb/classes-breadcrumb.jpg)",
         }}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="breadcrumb-text">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="breadcrumb-text">
                 <h2>Blog</h2>
               </div>
             </div>
@@ -21,15 +21,15 @@ function index() {
         </div>
       </section>
 
-      <section class="blog-section spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-item">
+      <section className="blog-section spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-blog-item">
                 <img src="/blog/blog-1.jpg" alt="" />
-                <div class="blog-widget">
-                  <div class="bw-date">February 17, 2019</div>
-                  <a href="#" class="tag">
+                <div className="blog-widget">
+                  <div className="bw-date">February 17, 2019</div>
+                  <a href="#" className="tag">
                     #Gym
                   </a>
                 </div>
@@ -40,12 +40,12 @@ function index() {
                 </h4>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-blog-item">
                 <img src="/blog/blog-2.jpg" alt="" />
-                <div class="blog-widget">
-                  <div class="bw-date">February 17, 2019</div>
-                  <a href="#" class="tag">
+                <div className="blog-widget">
+                  <div className="bw-date">February 17, 2019</div>
+                  <a href="#" className="tag">
                     #Sport
                   </a>
                 </div>
@@ -56,12 +56,12 @@ function index() {
                 </h4>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-blog-item">
                 <img src="/blog/blog-3.jpg" alt="" />
-                <div class="blog-widget">
-                  <div class="bw-date">February 17, 2019</div>
-                  <a href="#" class="tag">
+                <div className="blog-widget">
+                  <div className="bw-date">February 17, 2019</div>
+                  <a href="#" className="tag">
                     #Body
                   </a>
                 </div>
@@ -72,12 +72,12 @@ function index() {
                 </h4>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-blog-item">
                 <img src="/blog/blog-4.jpg" alt="" />
-                <div class="blog-widget">
-                  <div class="bw-date">February 17, 2019</div>
-                  <a href="#" class="tag">
+                <div className="blog-widget">
+                  <div className="bw-date">February 17, 2019</div>
+                  <a href="#" className="tag">
                     #Running
                   </a>
                 </div>
@@ -88,12 +88,12 @@ function index() {
                 </h4>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-blog-item">
                 <img src="/blog/blog-5.jpg" alt="" />
-                <div class="blog-widget">
-                  <div class="bw-date">February 17, 2019</div>
-                  <a href="#" class="tag">
+                <div className="blog-widget">
+                  <div className="bw-date">February 17, 2019</div>
+                  <a href="#" className="tag">
                     #Gym
                   </a>
                 </div>
@@ -104,12 +104,12 @@ function index() {
                 </h4>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-blog-item">
                 <img src="/blog/blog-6.jpg" alt="" />
-                <div class="blog-widget">
-                  <div class="bw-date">February 17, 2019</div>
-                  <a href="#" class="tag">
+                <div className="blog-widget">
+                  <div className="bw-date">February 17, 2019</div>
+                  <a href="#" className="tag">
                     #Sport
                   </a>
                 </div>
@@ -120,12 +120,12 @@ function index() {
                 </h4>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-blog-item">
                 <img src="/blog/blog-7.jpg" alt="" />
-                <div class="blog-widget">
-                  <div class="bw-date">February 17, 2019</div>
-                  <a href="#" class="tag">
+                <div className="blog-widget">
+                  <div className="bw-date">February 17, 2019</div>
+                  <a href="#" className="tag">
                     #Gym
                   </a>
                 </div>
@@ -136,12 +136,12 @@ function index() {
                 </h4>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-blog-item">
                 <img src="/blog/blog-8.jpg" alt="" />
-                <div class="blog-widget">
-                  <div class="bw-date">February 17, 2019</div>
-                  <a href="#" class="tag">
+                <div className="blog-widget">
+                  <div className="bw-date">February 17, 2019</div>
+                  <a href="#" className="tag">
                     #Body
                   </a>
                 </div>
@@ -152,12 +152,12 @@ function index() {
                 </h4>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-blog-item">
                 <img src="/blog/blog-9.jpg" alt="" />
-                <div class="blog-widget">
-                  <div class="bw-date">February 17, 2019</div>
-                  <a href="#" class="tag">
+                <div className="blog-widget">
+                  <div className="bw-date">February 17, 2019</div>
+                  <a href="#" className="tag">
                     #Gym
                   </a>
                 </div>
