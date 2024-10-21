@@ -31,13 +31,13 @@ const HeroSection = () => {
   return (
     <div>
       <section
-        class="hero-section set-bg"
+        className="hero-section set-bg"
         style={{ "background-image": "url(/hero-bg.jpg)" }}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="hero-text">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="hero-text">
                 <span className="">
                   <h3 style={{ color: "lightblue" }}>FITNESS ELEMENTS</h3>
                 </span>
@@ -54,7 +54,7 @@ const HeroSection = () => {
                 </p>
                 <button
                   type="submit"
-                  class="primary-btn"
+                  className="primary-btn"
                   onClick={joinNowScroll}
                 >
                   JOIN NOW
@@ -65,15 +65,15 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <section class="about-section spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="about-pic">
+      <section className="about-section spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="about-pic">
                 <img src="/about-pic.jpg" alt="" />
                 <a
                   href="https://www.youtube.com/watch?v=xMIKdpgxGQ4&feature=youtu.be"
-                  class="play-btn video-popup"
+                  className="play-btn video-popup"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -81,12 +81,12 @@ const HeroSection = () => {
                 </a>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="about-text">
+            <div className="col-lg-6">
+              <div className="about-text">
                 <h2>
                   WHATEVER YOUR GOALS <span>WE ARE HERE TO HELP</span>
                 </h2>
-                <p class="first-para">
+                <p className="first-para">
                   <span>
                     Absolute Fitness provides a 24/7 Fitness facility to help
                     people reach and maintain their goals. Our Staff, Trainers &
@@ -94,7 +94,7 @@ const HeroSection = () => {
                     members a great fitness experience
                   </span>
                 </p>
-                <p class="second-para">
+                <p className="second-para">
                   At Absolute Fitness you’ll find all the latest strength and
                   cardio equipment along with a energetic group exercise program
                   that includes POUND, Zumba, Kickboxing, Bootcamp, Muscle
@@ -102,7 +102,7 @@ const HeroSection = () => {
                   supportive environment with all kinds of people who are
                   working just as hard as you to meet their goals.
                 </p>
-                <a href="#" class="primary-btn">
+                <a href="#" className="primary-btn">
                   <button type="submit" onClick={redirectToAboutSection}>
                     Read More
                   </button>
@@ -113,85 +113,85 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <section class="classes-section spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title">
+      <section className="classes-section spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="section-title">
                 <h2>OUR CLASSES</h2>
               </div>
             </div>
           </div>
-          <div class="row classes-slider owl-carousel">
-            <div class="col-lg-4">
+          <div className="row classes-slider owl-carousel">
+            <div className="col-lg-4">
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 style={{ "background-image": "url(/classes-1.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Yoga</h4>
                   <span>
-                    <i class="fa fa-user"></i> Ryan Knight
+                    <i className="fa fa-user"></i> Ryan Knight
                   </span>
                 </div>
               </div>
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 style={{ "background-image": "url(/classes-4.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Karate</h4>
                   <span>
-                    <i class="fa fa-user"></i> Kevin McCormick
+                    <i className="fa fa-user"></i> Kevin McCormick
                   </span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div className="col-lg-4">
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 style={{ "background-image": "url(/classes-2.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Running</h4>
                   <span>
-                    <i class="fa fa-user"></i> Randy Rivera
+                    <i className="fa fa-user"></i> Randy Rivera
                   </span>
                 </div>
               </div>
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 style={{ "background-image": "url(/classes-5.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Dance</h4>
                   <span>
-                    <i class="fa fa-user"></i> Russell Lane
+                    <i className="fa fa-user"></i> Russell Lane
                   </span>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4">
+            <div className="col-lg-4">
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 style={{ "background-image": "url(/classes-7.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Personal Training</h4>
                   <span>
-                    <i class="fa fa-user"></i> Cole Robertson
+                    <i className="fa fa-user"></i> Cole Robertson
                   </span>
                 </div>
               </div>
               <div
-                class="single-class-item set-bg"
+                className="single-class-item set-bg"
                 style={{ "background-image": "url(/classes-8.jpg)" }}
               >
-                <div class="si-text">
+                <div className="si-text">
                   <h4>Weight Loss</h4>
                   <span>
-                    <i class="fa fa-user"></i> Ryan Scott
+                    <i className="fa fa-user"></i> Ryan Scott
                   </span>
                 </div>
               </div>
@@ -200,20 +200,20 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <section class="trainer-section spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title">
+      <section className="trainer-section spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="section-title">
                 <h2>EXPERT TRAINERS</h2>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="single-trainer-item">
+          <div className="row">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-trainer-item">
                 <img src="/trainer-1.jpg" alt="" />
-                <div class="trainer-text">
+                <div className="trainer-text">
                   <h5>Patrick Cortez</h5>
                   <span>Leader</span>
                   <p>
@@ -222,27 +222,27 @@ const HeroSection = () => {
                     has an 8 years experience in the field of nutrition and
                     fitness industry.
                   </p>
-                  <div class="trainer-social">
+                  <div className="trainer-social">
                     <a href="#">
-                      <i class="fa fa-facebook"></i>
+                      <i className="fa fa-facebook"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-instagram"></i>
+                      <i className="fa fa-instagram"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-twitter"></i>
+                      <i className="fa fa-twitter"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-pinterest"></i>
+                      <i className="fa fa-pinterest"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-trainer-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-trainer-item">
                 <img src="/trainer-2.jpg" alt="" />
-                <div class="trainer-text">
+                <div className="trainer-text">
                   <h5>Gregory Powers</h5>
                   <span>Gym coach</span>
                   <p>
@@ -250,27 +250,27 @@ const HeroSection = () => {
                     people who are looking for some help with their health and
                     fitness with the perfect local trainers for them.
                   </p>
-                  <div class="trainer-social">
+                  <div className="trainer-social">
                     <a href="#">
-                      <i class="fa fa-facebook"></i>
+                      <i className="fa fa-facebook"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-instagram"></i>
+                      <i className="fa fa-instagram"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-twitter"></i>
+                      <i className="fa fa-twitter"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-pinterest"></i>
+                      <i className="fa fa-pinterest"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-trainer-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-trainer-item">
                 <img src="/trainer-3.jpg" alt="" />
-                <div class="trainer-text">
+                <div className="trainer-text">
                   <h5>Walter Wagner</h5>
                   <span>Dance trainer</span>
                   <p>
@@ -278,18 +278,18 @@ const HeroSection = () => {
                     is a health and performance specialist with a background in
                     competitive volleyball.
                   </p>
-                  <div class="trainer-social">
+                  <div className="trainer-social">
                     <a href="#">
-                      <i class="fa fa-facebook"></i>
+                      <i className="fa fa-facebook"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-instagram"></i>
+                      <i className="fa fa-instagram"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-twitter"></i>
+                      <i className="fa fa-twitter"></i>
                     </a>
                     <a href="#">
-                      <i class="fa fa-pinterest"></i>
+                      <i className="fa fa-pinterest"></i>
                     </a>
                   </div>
                 </div>
@@ -299,48 +299,48 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <section class="testimonial-section spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title">
+      <section className="testimonial-section spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="section-title">
                 <h2>success stories</h2>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-10 offset-lg-1">
-              <div class="testimonial-slider owl-carousel">
-                <div class="testimonial-item">
+          <div className="row">
+            <div className="col-lg-10 offset-lg-1">
+              <div className="testimonial-slider owl-carousel">
+                <div className="testimonial-item">
                   <p>
                     started a week and a half ago and so far its been brilliant.
                     The PT trainers are all so friendly and encouraging and
                     genuinely care about getting you to where you want to be.{" "}
                   </p>
-                  <div class="ti-pic">
+                  <div className="ti-pic">
                     <img src="/testimonial/testimonial-1.jpg" alt="" />
-                    <div class="quote">
+                    <div className="quote">
                       <img src="/testimonial/quote-left.png" alt="" />
                     </div>
                   </div>
-                  <div class="ti-author">
+                  <div className="ti-author">
                     <h4>David Smith</h4>
                     <span>Leader</span>
                   </div>
                 </div>
-                <div class="testimonial-item">
+                <div className="testimonial-item">
                   <p>
                     From the moment you step foot through the door, everything
                     is bespoke based on your goals, I have without a doubt seen
                     massive improvements in myself.{" "}
                   </p>
-                  <div class="ti-pic">
+                  <div className="ti-pic">
                     <img src="/testimonial/anthony.jpg" alt="" />
-                    <div class="quote">
+                    <div className="quote">
                       <img src="/testimonial/quote-left.png" alt="" />
                     </div>
                   </div>
-                  <div class="ti-author">
+                  <div className="ti-author">
                     <h4>Patrick Cortez</h4>
                     <span>Leader</span>
                   </div>
@@ -352,14 +352,14 @@ const HeroSection = () => {
       </section>
 
       <section
-        class="banner-section set-bg"
+        className="banner-section set-bg"
         data-setbg="img/banner-bg.jpg"
         style={{ "background-image": "url(/banner-bg.jpg)" }}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="banner-text">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="banner-text">
                 <h2>EVERYBODY IS DIFFERENT. Get training today</h2>
                 <p>
                   <span style={{ color: "cyan" }}>
@@ -374,37 +374,37 @@ const HeroSection = () => {
 
                 <button
                   type="submit"
-                  class="primary-btn banner-btn"
+                  className="primary-btn banner-btn"
                   onClick={redirectToContactSection}
                 >
                   Contact Now
                 </button>
               </div>
             </div>
-            <div class="col-lg-5">
+            <div className="col-lg-5">
               <img src="/banner-person.png" alt="" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="membership-section spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title">
+      <section className="membership-section spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="section-title">
                 <h2>MEMBERSHIP PLANS</h2>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="membership-item">
-                <div class="mi-title">
+          <div className="row">
+            <div className="col-lg-4">
+              <div className="membership-item">
+                <div className="mi-title">
                   <h4>Basic</h4>
-                  <div class="triangle"></div>
+                  <div className="triangle"></div>
                 </div>
-                <h2 class="mi-price">&#8377; 1500</h2>
+                <h2 className="mi-price">&#8377; 1500</h2>
                 <ul>
                   <li>
                     <p>Duration</p>
@@ -425,13 +425,13 @@ const HeroSection = () => {
                 </ul>
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="membership-item">
-                <div class="mi-title">
+            <div className="col-lg-4">
+              <div className="membership-item">
+                <div className="mi-title">
                   <h4>Standard</h4>
-                  <div class="triangle"></div>
+                  <div className="triangle"></div>
                 </div>
-                <h2 class="mi-price">&#8377; 4000</h2>
+                <h2 className="mi-price">&#8377; 4000</h2>
                 <ul>
                   <li>
                     <p>Duration</p>
@@ -452,13 +452,13 @@ const HeroSection = () => {
                 </ul>
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="membership-item">
-                <div class="mi-title">
+            <div className="col-lg-4">
+              <div className="membership-item">
+                <div className="mi-title">
                   <h4>Premium</h4>
-                  <div class="triangle"></div>
+                  <div className="triangle"></div>
                 </div>
-                <h2 class="mi-price">&#8377; 12000</h2>
+                <h2 className="mi-price">&#8377; 12000</h2>
                 <ul>
                   <li>
                     <p>Duration</p>
@@ -485,22 +485,22 @@ const HeroSection = () => {
 
       <NewREgistrationsSection />
 
-      <section class="latest-blog-section spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title">
+      <section className="latest-blog-section spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="section-title">
                 <h2>Latest Blog</h2>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-item">
+          <div className="row">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-blog-item">
                 <img src="/blog/blog-1.jpg" alt="" />
-                <div class="blog-widget">
-                  <div class="bw-date">February 17, 2019</div>
-                  <a href="#" class="tag">
+                <div className="blog-widget">
+                  <div className="bw-date">February 17, 2019</div>
+                  <a href="#" className="tag">
                     #Gym
                   </a>
                 </div>
@@ -509,12 +509,12 @@ const HeroSection = () => {
                 </h4>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-blog-item">
                 <img src="/blog/blog-2.jpg" alt="" />
-                <div class="blog-widget">
-                  <div class="bw-date">February 17, 2019</div>
-                  <a href="#" class="tag">
+                <div className="blog-widget">
+                  <div className="bw-date">February 17, 2019</div>
+                  <a href="#" className="tag">
                     #Sport
                   </a>
                 </div>
@@ -523,12 +523,12 @@ const HeroSection = () => {
                 </h4>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-item">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-blog-item">
                 <img src="/blog/blog-3.jpg" alt="" />
-                <div class="blog-widget">
-                  <div class="bw-date">February 17, 2019</div>
-                  <a href="#" class="tag">
+                <div className="blog-widget">
+                  <div className="bw-date">February 17, 2019</div>
+                  <a href="#" className="tag">
                     #Body
                   </a>
                 </div>
@@ -541,12 +541,12 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <section class="footer-banner">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-6">
+      <section className="footer-banner">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-6">
               <div
-                class="footer-banner-item set-bg"
+                className="footer-banner-item set-bg"
                 style={{
                   "background-image": "url(/footer-banner/footer-banner-1.jpg)",
                 }}
@@ -559,9 +559,9 @@ const HeroSection = () => {
                 </p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div className="col-lg-6">
               <div
-                class="footer-banner-item set-bg"
+                className="footer-banner-item set-bg"
                 style={{
                   "background-image": "url(/footer-banner/footer-banner-2.jpg)",
                 }}
