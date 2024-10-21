@@ -24,7 +24,7 @@ const Header = () => {
 
   const redirectToOtherPage = (route, index) => {
     console.log("routerouterouteroute",route)
-    if (route === "home") {
+    if (route === "/home") {
       router.push("/");
     } else {
       router.push(route);
