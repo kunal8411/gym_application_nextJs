@@ -93,7 +93,7 @@ const Header = (props: {
                 </svg>
               </button> */}
 
-              <div className="w-full pr-4 font-medium bg-transparent pl-9 focus:outline-none xl:w-125">
+              <div className="font-bold text-black text-title-md2 dark:text-white">
                 Dashboard
               </div>
             </div>

@@ -118,9 +118,9 @@ function Footer() {
               <a href="#">Privacy Policy</a>
             </li>
           </ul>
-          All rights reserved | This template is made with{" "}
-          <i className="fa fa-heart" aria-hidden="true"></i> by{" "}
-          <a href="https://colorlib.com">Our Team</a>
+         <span className="text-white"> All rights reserved | This template is made with</span> {" "}
+          <i className="text-white fa fa-heart" aria-hidden="true"></i> <span className="text-white">by</span>{" "}
+          <a href="https://google.com">Our Team</a>
           <div className="footer-social">
             <a
               href="https://www.facebook.com/"
