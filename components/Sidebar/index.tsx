@@ -48,6 +48,7 @@ const menuGroups = [
         label: "Dashboard",
         route: "#",
         children: [{ label: "eCommerce", route: "/" }],
+        isVisible: false,
       },
       {
         icon: (
@@ -67,6 +68,7 @@ const menuGroups = [
         ),
         label: "Calendar",
         route: "/calendar",
+        isVisible: false,
       },
       {
         icon: (
@@ -90,6 +92,7 @@ const menuGroups = [
         ),
         label: "Profile",
         route: "/profile",
+        isVisible: true,
       },
       {
         icon: (
@@ -129,6 +132,7 @@ const menuGroups = [
           { label: "Form Elements", route: "/forms/form-elements" },
           { label: "Form Layout", route: "/forms/form-layout" },
         ],
+        isVisible: false,
       },
       {
         icon: (
@@ -160,6 +164,7 @@ const menuGroups = [
         ),
         label: "Tables",
         route: "/tables",
+        isVisible: true,
       },
       {
         icon: (
@@ -193,10 +198,12 @@ const menuGroups = [
             </defs>
           </svg>
         ),
-        label: "Settings",
-        route: "/settings",
+        label: "Add New User",
+        route: "/newUser",
+        isVisible: true,
       },
     ],
+    isVisible: false,
   },
   {
     name: "OTHERS",
@@ -235,6 +242,7 @@ const menuGroups = [
         ),
         label: "Chart",
         route: "/chart",
+        isVisible: false,
       },
       {
         icon: (
@@ -278,6 +286,7 @@ const menuGroups = [
           { label: "Alerts", route: "/ui/alerts" },
           { label: "Buttons", route: "/ui/buttons" },
         ],
+        isVisible: false,
       },
       {
         icon: (
@@ -317,8 +326,10 @@ const menuGroups = [
           { label: "Sign In", route: "/auth/signin" },
           { label: "Sign Up", route: "/auth/signup" },
         ],
+        isVisible: false,
       },
     ],
+    isVisible: false,
   },
 ];
 
@@ -329,7 +340,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <ClickOutside onClick={() => setSidebarOpen(false)}>
       <aside
-        className={`fixed left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:translate-x-0 ${
+        className={`fixed left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden duration-300 ease-linear dark:bg-boxdark lg:translate-x-0 bg-gray-900 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -367,24 +378,28 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
         </div>
         {/* <!-- SIDEBAR HEADER --> */}
 
-        <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
+        <div className="flex flex-col overflow-y-auto duration-300 ease-linear no-scrollbar">
           {/* <!-- Sidebar Menu --> */}
-          <nav className="mt-5 px-4 py-4 lg:mt-9 lg:px-6">
+          <nav className="px-4 py-4 mt-5 lg:mt-9 lg:px-6">
             {menuGroups.map((group, groupIndex) => (
               <div key={groupIndex}>
-                <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
-                  {group.name}
-                </h3>
-
+                {group.isVisible && (
+                  <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
+                    {group.name}
+                  </h3>
+                )}
                 <ul className="mb-6 flex flex-col gap-1.5">
-                  {group.menuItems.map((menuItem, menuIndex) => (
-                    <SidebarItem
-                      key={menuIndex}
-                      item={menuItem}
-                      pageName={pageName}
-                      setPageName={setPageName}
-                    />
-                  ))}
+                  {group.menuItems.map(
+                    (menuItem, menuIndex) =>
+                      menuItem.isVisible && (
+                        <SidebarItem
+                          key={menuIndex}
+                          item={menuItem}
+                          pageName={pageName}
+                          setPageName={setPageName}
+                        />
+                      )
+                  )}
                 </ul>
               </div>
             ))}
