@@ -3,37 +3,56 @@ const { MongoClient } = require("mongodb");
 import dbConnect from "../../../utils/dbConnect";
 import Admin from "../../../models/Admin";
 const CryptoJS = require("crypto-js");
+import jwt from "jsonwebtoken";
+import cookieSession from "cookie-session";
 export default async function handler(req, res) {
+  cookieSession({
+    signed: false,
+    secure: process.env.NODE_ENV === "production",
+  })(req, res, () => {});
   const { method } = req;
   let result = await dbConnect();
   switch (method) {
-    case "GET":
+    case "POST":
       try {
-        const { email, password } = req.query;
-        const adminByEmail = await Admin.findOne({
+        const { email, password } = req.body;
+        
+        const existingUser = await Admin.findOne({
           email: email,
         });
-        if (adminByEmail && Object.keys(adminByEmail).length > 0) {
+        if (!existingUser) {
+          res.status(500).send({
+            message: "Invalid credentials",
+          });
+        }
+        if (!!existingUser) {
           let hashedPassword = CryptoJS.AES.decrypt(
-            adminByEmail.password,
+            existingUser.password,
             process.env.PASSWORD_SECRET
           );
           let originalPassword = hashedPassword.toString(CryptoJS.enc.Utf8);
           if (originalPassword !== password) {
             res
               .status(401)
-              .json({ success: false, body: "Password is incorrect" });
+              .send({ success: false, message: "Password is incorrect" });
           }
-          res
-            .status(200)
-            .json({
-              success: true,
-              body: "Logged in Successfully",
-              data: adminByEmail,
-            });
-        }
 
-        res.status(200).json({ success: false, body: "Email is incorrect" });
+          const jsonWebToken = jwt.sign(
+            { id: existingUser._id, email: existingUser.email },
+            process.env.JWT_KEY
+          );
+          req.session = {
+            jwt: jsonWebToken,
+          };
+
+          res.status(200).send({
+            success: true,
+            message: "Logged in Successfully",
+            data: existingUser,
+          });
+        }
+        // throw
+        res.status(500).json({ success: false, body: "Email is incorrect" });
       } catch (error) {
         console.log("error while fetching data from admin DB", error);
       }
