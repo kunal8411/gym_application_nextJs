@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     case "POST":
       try {
         const { email, password } = req.body;
-        
+
         const existingUser = await Admin.findOne({
           email: email,
         });
@@ -51,29 +51,29 @@ export default async function handler(req, res) {
             data: existingUser,
           });
         }
-        // throw
+
         res.status(500).json({ success: false, body: "Email is incorrect" });
       } catch (error) {
         console.log("error while fetching data from admin DB", error);
       }
       break;
-    case "POST":
-      const { email, password } = req.body;
-      const newAdmin = new Admin({
-        email: email,
-        password: CryptoJS.AES.encrypt(
-          password,
-          process.env.PASSWORD_SECRET
-        ).toString(),
-      });
-      //   const newEmailRegistration = new Admin(req.body);
-      try {
-        const result = await newAdmin.save();
-        res.status(201).json({ success: true, data: result });
-      } catch (error) {
-        res.status(400).json({ success: false, error: error });
-      }
-      break;
+    // case "POST":
+    //   const { email, password } = req.body;
+    //   const newAdmin = new Admin({
+    //     email: email,
+    //     password: CryptoJS.AES.encrypt(
+    //       password,
+    //       process.env.PASSWORD_SECRET
+    //     ).toString(),
+    //   });
+    //   //   const newEmailRegistration = new Admin(req.body);
+    //   try {
+    //     const result = await newAdmin.save();
+    //     res.status(201).json({ success: true, data: result });
+    //   } catch (error) {
+    //     res.status(400).json({ success: false, error: error });
+    //   }
+    //   break;
     default:
       res.status(400).json({ success: false });
       break;
