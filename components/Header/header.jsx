@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import axios from "axios";
 
-const Header = () => {
+const Header = ({currentUser }) => {
   const router = useRouter();
   const [headerIndex, setHeaderIndex] = useState(0);
-  const [currentLoggedInUser, setCurrentLoggedInUser] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
   const setHeaderIndexInLocalStorage = (index) => {
@@ -15,15 +15,13 @@ const Header = () => {
 
   const redirectToLoginPage = () => router.push("/login");
 
-  const removeUserFromLS = () => {
-    localStorage.removeItem("currentLoggedInUser");
-    setCurrentLoggedInUser(null);
+  const removeUserFromLS = async () => {
+    const { data } = await axios.get("/api/login/logout");
     router.push("/");
     setIsOpen(false);
   };
 
   const redirectToOtherPage = (route, index) => {
-    console.log("routerouterouteroute",route)
     if (route === "/home") {
       router.push("/");
     } else {
@@ -37,9 +35,9 @@ const Header = () => {
 
   useEffect(() => {
     const headerTileIndex = localStorage.getItem("headerTileIndex");
-    const loggedInUser = localStorage.getItem("currentLoggedInUser");
+    
     if (headerTileIndex) setHeaderIndex(parseInt(headerTileIndex));
-    if (loggedInUser) setCurrentLoggedInUser(JSON.parse(loggedInUser));
+    
   }, []);
 
   return (
@@ -87,7 +85,7 @@ const Header = () => {
               )
             )}
             <li className="cursor-pointer nav-item">
-              {currentLoggedInUser ? (
+              {!!currentUser ? (
                 <span
                   onClick={removeUserFromLS}
                   className="hover:text-blue-500"

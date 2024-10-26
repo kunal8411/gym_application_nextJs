@@ -25,7 +25,6 @@ export function LoginForm() {
     method: "post",
     body: { email, password },
     onSuccess: (data: any) => {
-      console.log("data", data);
       toast.success("Logged in successfully", {
         position: "top-right",
         autoClose: 500,
