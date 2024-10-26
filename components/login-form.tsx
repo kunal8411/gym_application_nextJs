@@ -19,7 +19,7 @@ export const description =
 export function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
- 
+
   const { doRequest, errors } = useRequest({
     url: "/api/login",
     method: "post",
@@ -57,7 +57,7 @@ export function LoginForm() {
 
     doRequest();
   };
- 
+
   return (
     <Card className="w-full max-w-lg">
       <CardHeader className="flex flex-col space-y-1.5 px-6 pb-4 pt-6">
