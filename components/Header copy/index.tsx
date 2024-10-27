@@ -93,9 +93,12 @@ const Header = (props: {
                 </svg>
               </button> */}
 
-              <div className="font-bold text-black text-title-md2 dark:text-white">
+              <Link
+                className="font-bold text-black text-title-md2 dark:text-white"
+                href="/dashboard"
+              >
                 Dashboard
-              </div>
+              </Link>
             </div>
           </form>
         </div>
