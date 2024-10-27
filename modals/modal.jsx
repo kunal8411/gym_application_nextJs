@@ -4,9 +4,9 @@ import { Cross2Icon } from "@radix-ui/react-icons";
 const Modal = ({ isOpen, onOpenChange, title, children }) => {
   return (
     <Dialog.Root open={isOpen} onOpenChange={onOpenChange}>
-      <Dialog.Trigger asChild>
+      {/* <Dialog.Trigger asChild>
         <button className="px-4 py-2 text-white bg-blue-500 rounded">Open Modal</button>
-      </Dialog.Trigger>
+      </Dialog.Trigger> */}
 
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/50" />
