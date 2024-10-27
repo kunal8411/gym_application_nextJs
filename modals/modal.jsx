@@ -11,7 +11,7 @@ const Modal = ({ isOpen, onOpenChange, title, children }) => {
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/50" />
         <Dialog.Content className="fixed inset-0 flex items-center justify-center p-4">
-          <div className="w-full max-w-lg p-6 bg-white rounded-lg shadow-lg">
+          <div className="w-full max-w-lg px-6 py-4 bg-white rounded-lg shadow-lg">
             <div className="flex items-center justify-between">
               <Dialog.Title className="text-lg font-semibold">{title}</Dialog.Title>
               <Dialog.Close asChild>
