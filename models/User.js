@@ -1,5 +1,3 @@
-
-
 const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
@@ -7,16 +5,27 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  phoneNumber: { type: String, required: true, unique: true },
+  email: { type: String, required: true, unique: true },
+  tenure: { type: Number, required: true },
+
   age: {
     type: Number,
     default: 0,
   },
-  email: { type: String, required: true,unique: true },
-  phoneNumber: { type: String, required: true,unique: true },
+  payment: { type: Number, required: true },
+  profileImage: {
+    type: Buffer,
+    required: false,
+  },
   startDate: { type: Date, required: true },
   endDate: { type: Date, required: true },
-  payment: { type: Number, required: true },
+ 
+
+  
+  
+  
+ 
 });
 
-export default mongoose.models['Users'] || mongoose.model('Users', UserSchema);
-
+export default mongoose.models["Users"] || mongoose.model("Users", UserSchema);

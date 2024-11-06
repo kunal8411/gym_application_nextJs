@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import { useState } from "react";
+import DatePickerOne from "@/components/DatePicker/DatePickerOne";
 
 export const metadata: Metadata = {
   title: "Next.js Settings | TailAdmin - Next.js Dashboard Template",
@@ -137,6 +138,56 @@ const Settings = () => {
                       />
                     </div>
                   </div>
+                  <div className="mb-5.5">
+                    <label
+                      className="block mb-3 text-sm font-medium text-black dark:text-white"
+                      htmlFor="Username"
+                    >
+                      Image
+                    </label>
+                    <input
+                      type="file"
+                      className="w-full cursor-pointer rounded-lg border-[1.5px] border-stroke bg-transparent outline-none transition file:mr-5 file:border-collapse file:cursor-pointer file:border-0 file:border-r file:border-solid file:border-stroke file:bg-whiter file:px-5 file:py-3 file:hover:bg-blue-500 file:hover:bg-opacity-10 focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:file:border-form-strokedark dark:file:bg-white/30 dark:file:text-white dark:focus:border-primary"
+                    />
+                  </div>
+
+                  <div className="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                    <div className="w-full sm:w-1/2">
+                      <label
+                        className="block mb-3 text-sm font-medium text-black dark:text-white"
+                        htmlFor="fullName"
+                      >
+                        Age
+                      </label>
+                      <div className="relative">
+                        <input
+                          className="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+                          type="number"
+                          name="age"
+                          id="age"
+                          placeholder=""
+                          defaultValue=""
+                        />
+                      </div>
+                    </div>
+
+                    <div className="w-full sm:w-1/2">
+                      <label
+                        className="block mb-3 text-sm font-medium text-black dark:text-white"
+                        htmlFor="phoneNumber"
+                      >
+                        Payment
+                      </label>
+                      <input
+                        className="w-full rounded border border-stroke bg-gray px-4.5 py-3 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+                        type="number"
+                        name="payment"
+                        id="payment"
+                        placeholder=""
+                        defaultValue=""
+                      />
+                    </div>
+                  </div>
 
                   <div className="mb-5.5">
                     <div>
@@ -210,35 +261,12 @@ const Settings = () => {
                     </div>
                   </div>
 
-                  <div className="mb-5.5">
-                    <label
-                      className="block mb-3 text-sm font-medium text-black dark:text-white"
-                      htmlFor="Username"
-                    >
-                      Image
-                    </label>
-                    <input
-                      type="file"
-                      className="w-full cursor-pointer rounded-lg border-[1.5px] border-stroke bg-transparent outline-none transition file:mr-5 file:border-collapse file:cursor-pointer file:border-0 file:border-r file:border-solid file:border-stroke file:bg-whiter file:px-5 file:py-3 file:hover:bg-blue-500 file:hover:bg-opacity-10 focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:file:border-form-strokedark dark:file:bg-white/30 dark:file:text-white dark:focus:border-primary"
-                    />
-                  </div>
-
-                  <div className="mb-5.5">
-                    <label
-                      className="block mb-3 text-sm font-medium text-black dark:text-white"
-                      htmlFor="Username"
-                    >
-                      Address
-                    </label>
-                    <div className="relative">
-                      <textarea
-                        className="w-full rounded border border-stroke bg-gray py-3 pl-4 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-                        name="bio"
-                        id="bio"
-                        rows={6}
-                        placeholder="Address"
-                        defaultValue=""
-                      ></textarea>
+                  <div className="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                    <div className="flex-1">
+                      <DatePickerOne  label={"Start Date"}/>
+                    </div>
+                    <div className="flex-1">
+                      <DatePickerOne label={"End Date"}/>
                     </div>
                   </div>
 
@@ -260,7 +288,6 @@ const Settings = () => {
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </DefaultLayout>
