@@ -1,10 +1,10 @@
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 
-import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "../../modals/modal";
-import Link from "next/link";
+import useRequest from "../../hooks/use-request";
+import { toast } from "react-toastify";
 
 export const metadata = {
   title: "Next.js Tables | TailAdmin - Next.js Dashboard Template",
@@ -15,13 +15,101 @@ export const metadata = {
 const MembershipPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isOptionSelected, setIsOptionSelected] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedTenure, setSelectedTenure] = useState("");
+  const [selectedPresonalTrainer, setSelectedPresonalTrainer] = useState("");
+  const [selectedAmountOfPeople, setSelectedAmountOfPeople] = useState("");
+  const [selectedNumberOfVisit, setSelectedNumberOfVisit] = useState("");
+  const [selectedMembershipId, setSelectedMembershipId] = useState("");
+
+  const [membershipDetails, setMembershipDetails] = useState([]);
+
+  useEffect(() => {
+    fetchMembershipPlans();
+  }, []);
+
+  //get all membership Plans
+  const { doRequest: fetchMembershipPlans, errors: fetchMembershipErrors } =
+    useRequest({
+      url: "/api/membership-plan",
+      method: "get",
+      body: {},
+      onSuccess: (data) => {
+        console.log("DATA IS", data);
+        if (data?.success) {
+          setMembershipDetails(data?.message);
+        }
+      },
+      onError: (err) => {
+        console.log("Error while fetching the mebership details : ", err);
+        toast.error(`${err?.response?.data?.message}`, {
+          position: "top-right",
+          autoClose: 500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      },
+    });
+  //Update membership Plan
+  const { doRequest: updateMembershipPlan, errors: updateMembershipErros } =
+    useRequest({
+      url: "/api/membership-plan",
+      method: "put",
+      // body: {},
+      onSuccess: (data) => {
+        console.log("DATA IS in update", data);
+        if (data?.success) {
+          fetchMembershipPlans();
+          setIsModalOpen(false);
+        }
+      },
+      onError: (err) => {
+        console.log("Error while Updating the mebership details : ", err);
+        toast.error(`${err?.response?.data?.message}`, {
+          position: "top-right",
+          autoClose: 500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      },
+    });
+
+  //openEditModal
+  const handleEditMembershipModal = (membership, flag) => {
+    console.log("membershipmembershipmembership", membership);
+    const { tenure, personal_trainer, no_of_people, no_of_visits, _id } =
+      membership;
+    setSelectedMembershipId(_id);
+    setSelectedTenure(tenure);
+    setSelectedPresonalTrainer(personal_trainer);
+    setSelectedAmountOfPeople(no_of_people);
+    setSelectedNumberOfVisit(no_of_visits);
+    setIsModalOpen(flag);
+  };
+
+  // Handle edit membership form
   const handleSave = () => {
     // Add your save functionality here
     console.log("Selected Tenure:", selectedTenure);
-    console.log("Personal Trainer Option:", selectedTrainerOption);
-    setIsModalOpen(false); // Close modal after saving
+    console.log("Personal Trainer Option:", selectedPresonalTrainer);
+    updateMembershipPlan({
+      _id: selectedMembershipId,
+      updateData: {
+        tenure: selectedTenure,
+        personal_trainer: selectedPresonalTrainer,
+        no_of_people: selectedAmountOfPeople,
+        no_of_visits: selectedNumberOfVisit,
+      },
+    });
   };
+
   return (
     <DefaultLayout>
       {/* <Breadcrumb pageName="" /> */}
@@ -37,90 +125,48 @@ const MembershipPage = () => {
               </div>
             </div>
             <div className="row">
-              <div className="col-lg-4">
-                <div className="membership-item">
-                  <div className="mi-title">
-                    <h4>Basic</h4>
-                    <div className="triangle"></div>
+              {membershipDetails.length > 0 &&
+                membershipDetails.map((membership) => (
+                  <div className="col-lg-4" key={membership?._id}>
+                    <div className="membership-item">
+                      <div className="mi-title">
+                        <h4>{membership?.type_of_membership}</h4>
+                        <div className="triangle"></div>
+                      </div>
+                      <h2 className="mi-price">&#8377; {membership?.amount}</h2>
+                      <ul>
+                        <li>
+                          <p>Duration</p>
+                          <span>{membership?.tenure}</span>
+                        </li>
+                        <li>
+                          <p>Personal Trainer</p>
+                          <span>
+                            {membership?.personal_trainer ? "Yes" : "No"}
+                          </span>
+                        </li>
+                        <li>
+                          <p>Amount of people</p>
+                          <span>{membership?.no_of_people} person</span>
+                        </li>
+                        <li>
+                          <p>Number of visits</p>
+                          <span>{membership?.no_of_visits}/Day</span>
+                        </li>
+                        <li>
+                          <button
+                            onClick={() =>
+                              handleEditMembershipModal(membership, true)
+                            }
+                          >
+                            EDIT
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <h2 className="mi-price">&#8377; 1500</h2>
-                  <ul>
-                    <li>
-                      <p>Duration</p>
-                      <span>1 months</span>
-                    </li>
-                    <li>
-                      <p>Personal trainer</p>
-                      <span>No</span>
-                    </li>
-                    <li>
-                      <p>Amount of people</p>
-                      <span>01 person</span>
-                    </li>
-                    <li>
-                      <p>Number of visits</p>
-                      <span>1/Day</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="membership-item">
-                  <div className="mi-title">
-                    <h4>Standard</h4>
-                    <div className="triangle"></div>
-                  </div>
-                  <h2 className="mi-price">&#8377; 4000</h2>
-                  <ul>
-                    <li>
-                      <p>Duration</p>
-                      <span>3 months</span>
-                    </li>
-                    <li>
-                      <p>Personal trainer</p>
-                      <span>No</span>
-                    </li>
-                    <li>
-                      <p>Amount of people</p>
-                      <span>01 person</span>
-                    </li>
-                    <li>
-                      <p>Number of visits</p>
-                      <span>2/Day</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="membership-item">
-                  <div className="mi-title">
-                    <h4>Premium</h4>
-                    <div className="triangle"></div>
-                  </div>
-                  <h2 className="mi-price">&#8377; 12000</h2>
-                  <ul>
-                    <li>
-                      <p>Duration</p>
-                      <span>12 months</span>
-                    </li>
-                    <li>
-                      <p>Personal trainer</p>
-                      <span>Yes</span>
-                    </li>
-                    <li>
-                      <p>Amount of people</p>
-                      <span>01 person</span>
-                    </li>
-                    <li>
-                      <p>Number of visits</p>
-                      <span>Unlimited</span>
-                    </li>
-                    <li>
-                      <button onClick={() => setIsModalOpen(true)}>EDIT</button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                ))}
+              
             </div>
           </div>
         </section>
@@ -140,11 +186,10 @@ const MembershipPage = () => {
 
                 <div className="relative z-20 bg-white dark:bg-form-input">
                   <select
-                    value={selectedOption}
-                    //   onChange={(e) => {
-                    //     setSelectedOption(e.target.value);
-                    //     changeTextColor();
-                    //   }}
+                    value={selectedTenure}
+                    onChange={(e) => {
+                      setSelectedTenure(e.target.value);
+                    }}
                     className={`relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-4 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input ${
                       isOptionSelected ? "text-black dark:text-white" : ""
                     }`}
@@ -156,28 +201,19 @@ const MembershipPage = () => {
                     >
                       Select Tenure
                     </option>
-                    <option
-                      value="1 Month"
-                      className="text-body dark:text-bodydark"
-                    >
+                    <option value="1" className="text-body dark:text-bodydark">
                       1 Month
                     </option>
-                    <option
-                      value="3 Months"
-                      className="text-body dark:text-bodydark"
-                    >
+                    <option value="3" className="text-body dark:text-bodydark">
                       3 Months
                     </option>
-                    <option
+                    {/* <option
                       value="6 Months"
                       className="text-body dark:text-bodydark"
                     >
                       6 Months
-                    </option>
-                    <option
-                      value="1 Year"
-                      className="text-body dark:text-bodydark"
-                    >
+                    </option> */}
+                    <option value="12" className="text-body dark:text-bodydark">
                       1 Year
                     </option>
                   </select>
@@ -207,16 +243,15 @@ const MembershipPage = () => {
             <div className="mb-5.5">
               <div>
                 <label className="block mb-3 text-sm font-medium text-black dark:text-white">
-                  Personal trainer
+                  Personal Trainer
                 </label>
 
                 <div className="relative z-20 bg-white dark:bg-form-input">
                   <select
-                    value={selectedOption}
-                    //   onChange={(e) => {
-                    //     setSelectedOption(e.target.value);
-                    //     changeTextColor();
-                    //   }}
+                    value={selectedPresonalTrainer}
+                    onChange={(e) => {
+                      setSelectedPresonalTrainer(e.target.value);
+                    }}
                     className={`relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-4 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input ${
                       isOptionSelected ? "text-black dark:text-white" : ""
                     }`}
@@ -229,12 +264,15 @@ const MembershipPage = () => {
                       Select Oprion
                     </option>
                     <option
-                      value="Yes"
+                      value="true"
                       className="text-body dark:text-bodydark"
                     >
                       Yes
                     </option>
-                    <option value="No" className="text-body dark:text-bodydark">
+                    <option
+                      value="false"
+                      className="text-body dark:text-bodydark"
+                    >
                       No
                     </option>
                   </select>
@@ -275,6 +313,10 @@ const MembershipPage = () => {
                 id="phoneNumber"
                 placeholder=""
                 defaultValue=""
+                value={selectedAmountOfPeople}
+                onChange={(e) => {
+                  setSelectedAmountOfPeople(e.target.value);
+                }}
               />
             </div>
             {/* Number of visit */}
@@ -286,11 +328,10 @@ const MembershipPage = () => {
 
                 <div className="relative z-20 bg-white dark:bg-form-input">
                   <select
-                    value={selectedOption}
-                    //   onChange={(e) => {
-                    //     setSelectedOption(e.target.value);
-                    //     changeTextColor();
-                    //   }}
+                    value={selectedNumberOfVisit}
+                    onChange={(e) => {
+                      setSelectedNumberOfVisit(e.target.value);
+                    }}
                     className={`relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-4 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input ${
                       isOptionSelected ? "text-black dark:text-white" : ""
                     }`}
@@ -302,23 +343,14 @@ const MembershipPage = () => {
                     >
                       Select Oprion
                     </option>
-                    <option
-                      value="1/day"
-                      className="text-body dark:text-bodydark"
-                    >
+                    <option value="1" className="text-body dark:text-bodydark">
                       1/day
                     </option>
-                    <option
-                      value="2/day"
-                      className="text-body dark:text-bodydark"
-                    >
+                    <option value="2" className="text-body dark:text-bodydark">
                       2/day
                     </option>
-                    <option
-                      value="Unlimited"
-                      className="text-body dark:text-bodydark"
-                    >
-                      Unlimited
+                    <option value="3" className="text-body dark:text-bodydark">
+                      3/day
                     </option>
                   </select>
 
@@ -345,13 +377,13 @@ const MembershipPage = () => {
             </div>
           </div>
           <div className="flex justify-end mt-5">
-              <button
-                onClick={handleSave}
-                className="px-4 py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
-              > 
-                Save
-              </button>
-            </div>
+            <button
+              onClick={handleSave}
+              className="px-4 py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
+            >
+              Save
+            </button>
+          </div>
         </Modal>
       </div>
     </DefaultLayout>

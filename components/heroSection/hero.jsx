@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./hero.module.css";
 import Header from "../Header/header";
 import Footer from "../footer/footer";
@@ -6,8 +6,43 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { toast } from "react-toastify";
+import useRequest from "../../hooks/use-request";
+
+
 import NewREgistrationsSection from "../newREgistrationsSection";
 const HeroSection = () => {
+  const [membershipDetails, setMembershipDetails] = useState([]);
+  useEffect(() => {
+    fetchMembershipPlans();
+  }, []);
+
+  //get all membership Plans
+  const { doRequest: fetchMembershipPlans, errors: fetchMembershipErrors } =
+    useRequest({
+      url: "/api/membership-plan",
+      method: "get",
+      body: {},
+      onSuccess: (data) => {
+        console.log("DATA IS", data);
+        if (data?.success) {
+          setMembershipDetails(data?.message);
+        }
+      },
+      onError: (err) => {
+        console.log("Error while fetching the mebership details : ", err);
+        toast.error(`${err?.response?.data?.message}`, {
+          position: "top-right",
+          autoClose: 500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      },
+    });
   const router = useRouter();
   const transition = { type: "spring", duration: 3 };
   const joinNowScroll = () => {
@@ -398,88 +433,49 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-4">
-              <div className="membership-item">
-                <div className="mi-title">
-                  <h4>Basic</h4>
-                  <div className="triangle"></div>
-                </div>
-                <h2 className="mi-price">&#8377; 1500</h2>
-                <ul>
-                  <li>
-                    <p>Duration</p>
-                    <span>1 months</span>
-                  </li>
-                  <li>
-                    <p>Personal trainer</p>
-                    <span>No</span>
-                  </li>
-                  <li>
-                    <p>Amount of people</p>
-                    <span>01 person</span>
-                  </li>
-                  <li>
-                    <p>Number of visits</p>
-                    <span>1/Day</span>
-                  </li>
-                </ul>
-              </div>
+              {membershipDetails.length > 0 &&
+                membershipDetails.map((membership) => (
+                  <div className="col-lg-4" key={membership?._id}>
+                    <div className="membership-item">
+                      <div className="mi-title">
+                        <h4>{membership?.type_of_membership}</h4>
+                        <div className="triangle"></div>
+                      </div>
+                      <h2 className="mi-price">&#8377; {membership?.amount}</h2>
+                      <ul>
+                        <li>
+                          <p>Duration</p>
+                          <span>{membership?.tenure}</span>
+                        </li>
+                        <li>
+                          <p>Personal Trainer</p>
+                          <span>
+                            {membership?.personal_trainer ? "Yes" : "No"}
+                          </span>
+                        </li>
+                        <li>
+                          <p>Amount of people</p>
+                          <span>{membership?.no_of_people} person</span>
+                        </li>
+                        <li>
+                          <p>Number of visits</p>
+                          <span>{membership?.no_of_visits}/Day</span>
+                        </li>
+                        <li>
+                          <button
+                            onClick={() =>
+                              handleEditMembershipModal(membership, true)
+                            }
+                          >
+                            EDIT
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+             
             </div>
-            <div className="col-lg-4">
-              <div className="membership-item">
-                <div className="mi-title">
-                  <h4>Standard</h4>
-                  <div className="triangle"></div>
-                </div>
-                <h2 className="mi-price">&#8377; 4000</h2>
-                <ul>
-                  <li>
-                    <p>Duration</p>
-                    <span>3 months</span>
-                  </li>
-                  <li>
-                    <p>Personal trainer</p>
-                    <span>No</span>
-                  </li>
-                  <li>
-                    <p>Amount of people</p>
-                    <span>01 person</span>
-                  </li>
-                  <li>
-                    <p>Number of visits</p>
-                    <span>2/Day</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="membership-item">
-                <div className="mi-title">
-                  <h4>Premium</h4>
-                  <div className="triangle"></div>
-                </div>
-                <h2 className="mi-price">&#8377; 12000</h2>
-                <ul>
-                  <li>
-                    <p>Duration</p>
-                    <span>12 months</span>
-                  </li>
-                  <li>
-                    <p>Personal trainer</p>
-                    <span>Yes</span>
-                  </li>
-                  <li>
-                    <p>Amount of people</p>
-                    <span>01 person</span>
-                  </li>
-                  <li>
-                    <p>Number of visits</p>
-                    <span>Unlimited</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

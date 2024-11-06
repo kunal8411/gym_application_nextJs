@@ -84,6 +84,16 @@ const Header = ({currentUser }) => {
                 </li>
               )
             )}
+             <li className="cursor-pointer nav-item">
+              {!!currentUser && (
+                <span
+                  onClick={()=>{router.push("/dashboard");}}
+                  className="hover:text-blue-500"
+                >
+                  Dashboard
+                </span>
+              )}
+            </li>
             <li className="cursor-pointer nav-item">
               {!!currentUser ? (
                 <span
@@ -101,6 +111,7 @@ const Header = ({currentUser }) => {
                 </span>
               )}
             </li>
+           
           </ul>
         </nav>
       </div>
